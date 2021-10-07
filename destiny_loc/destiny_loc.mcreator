@@ -1424,23 +1424,6 @@
       }
     },
     {
-      "name": "TPseasonquest",
-      "type": "procedure",
-      "sortid": 111,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "t_pseasonquest",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "TPmarsgate",
       "type": "procedure",
       "sortid": 113,
@@ -1634,7 +1617,7 @@
   "workspaceSettings": {
     "modid": "destiny_loc",
     "modName": "Destiny LoC",
-    "version": "1.0.168",
+    "version": "1.0.170",
     "description": "for Light our Craft Server Mods",
     "author": "Vanilla",
     "websiteURL": "https://twitter.com/Vanilla_JP",
