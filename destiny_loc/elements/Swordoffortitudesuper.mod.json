@@ -1,0 +1,33 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "netherite_sword",
+    "customModelName": "Normal",
+    "name": "[Exotic] Sword of Fortitude",
+    "specialInfo": [
+      "Touch the despair."
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:DestinyLoC"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 0,
+    "efficiency": 0.0,
+    "attackSpeed": 10.0,
+    "enchantability": 0,
+    "damageVsEntity": 38.0,
+    "usageCount": 6000,
+    "blocksAffected": [],
+    "hasGlow": true,
+    "repairItems": [
+      {
+        "value": "Blocks.SOUL_SOIL"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "destiny_loc:legendary_ingot"
+    },
+    "1": {
+      "item": "destiny_loc:legendary_ingot"
+    },
+    "2": {
+      "item": "destiny_loc:legendary_ingot"
+    },
+    "3": {
+      "item": "destiny_loc:legendary_ingot"
+    },
+    "4": {
+      "item": "destiny_loc:legendary_ingot"
+    },
+    "5": {
+      "item": "destiny_loc:legendary_ingot"
+    },
+    "6": {
+      "item": "destiny_loc:legendary_ingot"
+    },
+    "7": {
+      "item": "destiny_loc:legendary_ingot"
+    },
+    "8": {
+      "item": "destiny_loc:legendary_ingot"
+    }
+  },
+  "result": {
+    "item": "destiny_loc:legendary_block",
+    "count": 1
+  }
+}

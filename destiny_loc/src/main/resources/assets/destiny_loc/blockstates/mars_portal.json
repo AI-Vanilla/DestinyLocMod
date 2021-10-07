@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "destiny_loc:block/mars_portal_ew"
+    },
+    "axis=x": {
+      "model": "destiny_loc:block/mars_portal_ns"
+    }
+  }
+}

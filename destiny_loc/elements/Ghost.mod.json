@@ -1,0 +1,88 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 136,
+    "height": 176,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Welcome Light our Craft",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Welcome Light our Craft",
+          "x": 155,
+          "y": 52
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Location",
+          "onClick": {
+            "name": "Openlocation"
+          },
+          "width": 65,
+          "height": 20,
+          "name": "Location",
+          "x": 181,
+          "y": 108
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Map",
+          "onClick": {
+            "name": "Openmap"
+          },
+          "width": 40,
+          "height": 20,
+          "name": "Map",
+          "x": 193,
+          "y": 130
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Quest",
+          "width": 50,
+          "height": 20,
+          "name": "Quest",
+          "x": 188,
+          "y": 86
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Season",
+          "onClick": {
+            "name": "Openseason"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Season",
+          "x": 185,
+          "y": 152
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

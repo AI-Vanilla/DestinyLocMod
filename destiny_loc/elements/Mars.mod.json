@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:MarsBio"
+      }
+    ],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "Blocks.RED_SANDSTONE#0"
+    },
+    "fluidBlock": {
+      "value": "Blocks.SAND#1"
+    },
+    "airColor": {
+      "value": -804997,
+      "falpha": 0.0
+    },
+    "canRespawnHere": true,
+    "hasFog": false,
+    "isDark": false,
+    "doesWaterVaporize": true,
+    "sleepResult": "DENY",
+    "hasSkyLight": true,
+    "imitateOverworldBehaviour": true,
+    "portalFrame": {
+      "value": "Blocks.RED_SANDSTONE#0"
+    },
+    "portalParticles": {
+      "value": "SPIT"
+    },
+    "portalLuminance": 15,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Mars Portal Igniter",
+    "igniterTab": {
+      "value": "CUSTOM:DestinyLoC"
+    },
+    "texture": "destiny_gem",
+    "portalTexture": "mars_portal",
+    "enablePortal": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "_fv": 24,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:Space"
+      }
+    ],
+    "worldGenType": "End like gen",
+    "mainFillerBlock": {
+      "value": "Blocks.VOID_AIR"
+    },
+    "fluidBlock": {
+      "value": "Blocks.VOID_AIR"
+    },
+    "airColor": {
+      "value": -16777216,
+      "falpha": 0.0
+    },
+    "canRespawnHere": true,
+    "hasFog": false,
+    "isDark": false,
+    "doesWaterVaporize": true,
+    "sleepResult": "DENY",
+    "hasSkyLight": false,
+    "imitateOverworldBehaviour": false,
+    "onPlayerEntersDimension": {
+      "name": "SpaceDimentionpureiyagadeimenziyonniRututatoki"
+    },
+    "onPlayerLeavesDimension": {
+      "name": "SpaceDimentionpureiyagadeimenziyonkaraChutaShi"
+    },
+    "portalFrame": {
+      "value": "Blocks.CONCRETE#8"
+    },
+    "portalParticles": {
+      "value": "PORTAL"
+    },
+    "portalLuminance": 15,
+    "portalSound": {
+      "value": ""
+    },
+    "igniterName": "Space Dimention Portal Igniter",
+    "igniterTab": {
+      "value": "CUSTOM:DestinyLoC"
+    },
+    "texture": "space",
+    "portalTexture": "void",
+    "enablePortal": true
+  }
+}

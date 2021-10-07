@@ -1,0 +1,42 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "destiny_loc:enhanced_prism"
+    },
+    "1": {
+      "item": "destiny_loc:enhanced_prism"
+    },
+    "2": {
+      "item": "destiny_loc:enhanced_prism"
+    },
+    "3": {
+      "item": "destiny_loc:enhanced_prism"
+    },
+    "4": {
+      "item": "minecraft:nether_star"
+    },
+    "5": {
+      "item": "destiny_loc:enhanced_prism"
+    },
+    "6": {
+      "item": "destiny_loc:enhanced_prism"
+    },
+    "7": {
+      "item": "destiny_loc:enhanced_prism"
+    },
+    "8": {
+      "item": "destiny_loc:enhanced_prism"
+    }
+  },
+  "result": {
+    "item": "destiny_loc:ascendantfragment",
+    "count": 1
+  }
+}

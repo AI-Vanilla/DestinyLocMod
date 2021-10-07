@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "destiny_loc:blocks/cryptsecurity",
+    "up": "destiny_loc:blocks/cryptsecurity",
+    "north": "destiny_loc:blocks/cryptsecurity",
+    "east": "destiny_loc:blocks/cryptsecurity",
+    "south": "destiny_loc:blocks/cryptsecurity",
+    "west": "destiny_loc:blocks/cryptsecurity",
+    "particle": "destiny_loc:blocks/cryptsecurity"
+  }
+}

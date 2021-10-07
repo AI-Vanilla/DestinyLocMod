@@ -1,0 +1,23 @@
+{
+  "_fv": 24,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Copy of the duplicate",
+    "icon": "posion_bad.png",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "CopyoftheduplicateposiyonnoXiaoGuogaKaiShiShiYongsaretatoki"
+    },
+    "onExpired": {
+      "name": "CopyoftheduplicateposiyonXiaoGuogaQieretaShi"
+    }
+  }
+}

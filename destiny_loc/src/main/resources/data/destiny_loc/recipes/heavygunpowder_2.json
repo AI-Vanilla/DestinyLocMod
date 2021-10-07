@@ -1,0 +1,22 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:iron_nugget"
+    },
+    "1": {
+      "item": "minecraft:iron_block"
+    },
+    "2": {
+      "item": "destiny_loc:heavygunpowder"
+    }
+  },
+  "result": {
+    "item": "destiny_loc:kineticbullet",
+    "count": 3
+  }
+}

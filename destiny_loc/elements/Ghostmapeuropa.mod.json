@@ -1,0 +1,132 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 400,
+    "height": 195,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Map",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Map",
+          "x": 205,
+          "y": 33
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Quest",
+          "width": 50,
+          "height": 20,
+          "name": "Quest",
+          "x": 86,
+          "y": 26
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Season",
+          "onClick": {
+            "name": "Openseason"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Season",
+          "x": 319,
+          "y": 26
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Location",
+          "onClick": {
+            "name": "Openlocation"
+          },
+          "width": 65,
+          "height": 20,
+          "name": "Location",
+          "x": 239,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "EUROPA",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "EUROPA",
+          "x": 198,
+          "y": 44
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "apple.png",
+          "use1Xscale": false,
+          "name": "apple.png",
+          "x": 205,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "GATE",
+          "onClick": {
+            "name": "TPeuropagate"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "GATE",
+          "x": 190,
+          "y": 113
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "raid.png",
+          "use1Xscale": true,
+          "name": "raid.png",
+          "x": 305,
+          "y": 56
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "DEEP STONE CRYPT",
+          "width": 105,
+          "height": 20,
+          "name": "DEEP STONE CRYPT",
+          "x": 276,
+          "y": 104
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "destiny_loc:block/deep_stone_crypt_portal_ew"
+    },
+    "axis=x": {
+      "model": "destiny_loc:block/deep_stone_crypt_portal_ns"
+    }
+  }
+}

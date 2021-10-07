@@ -1,0 +1,13 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "destiny_loc:legendary_block"
+    }
+  ],
+  "result": {
+    "item": "destiny_loc:legendary_ingot",
+    "count": 9
+  }
+}

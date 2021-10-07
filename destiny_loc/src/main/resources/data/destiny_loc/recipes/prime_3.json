@@ -1,0 +1,42 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "destiny_loc:prime"
+    },
+    "1": {
+      "item": "destiny_loc:prime"
+    },
+    "2": {
+      "item": "destiny_loc:prime"
+    },
+    "3": {
+      "item": "destiny_loc:prime"
+    },
+    "4": {
+      "item": "destiny_loc:legendary_engram"
+    },
+    "5": {
+      "item": "destiny_loc:prime"
+    },
+    "6": {
+      "item": "destiny_loc:prime"
+    },
+    "7": {
+      "item": "destiny_loc:prime"
+    },
+    "8": {
+      "item": "destiny_loc:prime"
+    }
+  },
+  "result": {
+    "item": "destiny_loc:prime_engram",
+    "count": 1
+  }
+}

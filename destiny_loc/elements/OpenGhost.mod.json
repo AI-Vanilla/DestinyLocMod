@@ -1,0 +1,12 @@
+{
+  "_fv": 24,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "G",
+    "keyBindingName": "Navigation",
+    "keyBindingCategoryKey": "ui",
+    "onKeyPressed": {
+      "name": "Push_g_key"
+    }
+  }
+}

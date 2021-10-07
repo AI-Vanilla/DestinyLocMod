@@ -1,0 +1,257 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 400,
+    "height": 195,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Location",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Location",
+          "x": 194,
+          "y": 31
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "apple.png",
+          "use1Xscale": false,
+          "name": "apple.png",
+          "x": 208,
+          "y": 160
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "OVER WORLD",
+          "onClick": {
+            "name": "Openmapoverworld"
+          },
+          "width": 75,
+          "height": 20,
+          "name": "OVER WORLD",
+          "x": 177,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "golden_pickaxe.png",
+          "use1Xscale": false,
+          "name": "golden_pickaxe.png",
+          "x": 39,
+          "y": 176
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "MARS",
+          "onClick": {
+            "name": "Openmapmars"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "MARS",
+          "x": 24,
+          "y": 192
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "golden_pickaxe.png",
+          "use1Xscale": false,
+          "name": "golden_pickaxe.png",
+          "x": 41,
+          "y": 130
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "EUROPA",
+          "onClick": {
+            "name": "Openmapeuropa"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "EUROPA",
+          "x": 20,
+          "y": 147
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "golden_pickaxe.png",
+          "use1Xscale": false,
+          "name": "golden_pickaxe.png",
+          "x": 364,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "DEEP LAND",
+          "onClick": {
+            "name": "Openmapdeepland"
+          },
+          "width": 70,
+          "height": 20,
+          "name": "DEEP LAND",
+          "x": 336,
+          "y": 115
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Quest",
+          "width": 50,
+          "height": 20,
+          "name": "Quest",
+          "x": 45,
+          "y": 26
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Map",
+          "onClick": {
+            "name": "Openmap"
+          },
+          "width": 40,
+          "height": 20,
+          "name": "Map",
+          "x": 126,
+          "y": 26
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Season",
+          "onClick": {
+            "name": "Openseason"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Season",
+          "x": 259,
+          "y": 26
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "?",
+          "width": 30,
+          "height": 20,
+          "name": "?",
+          "x": 269,
+          "y": 94
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "?",
+          "width": 30,
+          "height": 20,
+          "name": "?",
+          "x": 33,
+          "y": 72
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "?",
+          "width": 30,
+          "height": 20,
+          "name": "?",
+          "x": 336,
+          "y": 181
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "posion_bad.png",
+          "use1Xscale": false,
+          "name": "posion_bad.png",
+          "x": 40,
+          "y": 55
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "posion_bad.png",
+          "use1Xscale": false,
+          "name": "posion_bad.png",
+          "x": 275,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "posion_bad.png",
+          "use1Xscale": false,
+          "name": "posion_bad.png",
+          "x": 343,
+          "y": 165
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Legendary",
+          "onClick": {
+            "name": "Openmaplegendary"
+          },
+          "width": 70,
+          "height": 20,
+          "name": "Legendary",
+          "x": 93,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "primequest.png",
+          "use1Xscale": true,
+          "name": "primequest.png",
+          "x": 107,
+          "y": 47
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

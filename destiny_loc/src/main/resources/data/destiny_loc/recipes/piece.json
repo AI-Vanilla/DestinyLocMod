@@ -1,0 +1,9 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:stonecutting",
+  "count": 9,
+  "ingredient": {
+    "item": "destiny_loc:legendary_ingot"
+  },
+  "result": "destiny_loc:legendary_piece"
+}

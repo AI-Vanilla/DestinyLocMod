@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "destiny_loc:blocks/legendary_ore",
+    "particle": "destiny_loc:blocks/legendary_ore"
+  }
+}

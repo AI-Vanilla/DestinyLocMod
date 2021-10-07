@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Hatred",
+    "splashName": "Splash Hatred",
+    "lingeringName": "Lingering Hatred",
+    "arrowName": "Arrow of Hatred",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Hatred"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:smelting",
+  "experience": 10,
+  "cookingtime": 20,
+  "ingredient": {
+    "item": "destiny_loc:legendary_ore"
+  },
+  "result": {
+    "item": "destiny_loc:legendary_ingot"
+  }
+}

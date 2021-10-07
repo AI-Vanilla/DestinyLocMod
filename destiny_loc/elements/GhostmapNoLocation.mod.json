@@ -1,0 +1,87 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 400,
+    "height": 195,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "Quest",
+          "width": 50,
+          "height": 20,
+          "name": "Quest",
+          "x": 36,
+          "y": 26
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Location",
+          "onClick": {
+            "name": "Openlocation"
+          },
+          "width": 65,
+          "height": 20,
+          "name": "Location",
+          "x": 244,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Map",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Map",
+          "x": 201,
+          "y": 31
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Select a location.",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Select a location.",
+          "x": 167,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Season",
+          "onClick": {
+            "name": "Openseason"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Season",
+          "x": 327,
+          "y": 26
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

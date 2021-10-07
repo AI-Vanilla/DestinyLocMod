@@ -1,0 +1,12 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:smelting",
+  "experience": 200,
+  "cookingtime": 6000,
+  "ingredient": {
+    "item": "destiny_loc:legendary_block"
+  },
+  "result": {
+    "item": "destiny_loc:legendary_engram"
+  }
+}

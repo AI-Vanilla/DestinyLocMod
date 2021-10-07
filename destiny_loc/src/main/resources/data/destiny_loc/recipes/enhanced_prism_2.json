@@ -1,0 +1,42 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "destiny_loc:enhancement_core"
+    },
+    "1": {
+      "item": "destiny_loc:enhancement_core"
+    },
+    "2": {
+      "item": "destiny_loc:enhancement_core"
+    },
+    "3": {
+      "item": "destiny_loc:enhancement_core"
+    },
+    "4": {
+      "item": "destiny_loc:enhancement_core"
+    },
+    "5": {
+      "item": "destiny_loc:enhancement_core"
+    },
+    "6": {
+      "item": "destiny_loc:enhancement_core"
+    },
+    "7": {
+      "item": "destiny_loc:enhancement_core"
+    },
+    "8": {
+      "item": "destiny_loc:enhancement_core"
+    }
+  },
+  "result": {
+    "item": "minecraft:gold_block",
+    "count": 10
+  }
+}

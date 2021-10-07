@@ -1,0 +1,20 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1"
+  ],
+  "key": {
+    "0": {
+      "item": "destiny_loc:swordoffortitude"
+    },
+    "1": {
+      "item": "destiny_loc:oversoul"
+    }
+  },
+  "result": {
+    "item": "destiny_loc:swordoffor_2",
+    "count": 1
+  }
+}

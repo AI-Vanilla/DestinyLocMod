@@ -1,0 +1,9 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "destiny_loc:prime_ingot"
+  },
+  "result": "destiny_loc:prime"
+}

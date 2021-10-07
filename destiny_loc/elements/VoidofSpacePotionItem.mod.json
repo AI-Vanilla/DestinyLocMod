@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Voidof Space",
+    "splashName": "Splash Voidof Space",
+    "lingeringName": "Lingering Voidof Space",
+    "arrowName": "Arrow of Voidof Space",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:VoidofSpace"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

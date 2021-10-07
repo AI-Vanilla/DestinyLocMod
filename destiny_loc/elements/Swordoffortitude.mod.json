@@ -1,0 +1,33 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "iron_sword",
+    "customModelName": "Normal",
+    "name": "Sword of Fortitude",
+    "specialInfo": [
+      "Eternal obsession."
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:DestinyLoC"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 0,
+    "efficiency": 0.0,
+    "attackSpeed": 1.5,
+    "enchantability": 0,
+    "damageVsEntity": 5.699999999999999,
+    "usageCount": 100,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "Items.BONE"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

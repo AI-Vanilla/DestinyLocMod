@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "destiny_loc:block/europad_portal_ew"
+    },
+    "axis=x": {
+      "model": "destiny_loc:block/europad_portal_ns"
+    }
+  }
+}

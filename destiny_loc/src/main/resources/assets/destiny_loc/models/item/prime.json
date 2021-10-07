@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "destiny_loc:items/prime_gem"
+  }
+}
