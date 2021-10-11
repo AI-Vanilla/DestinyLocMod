@@ -1,0 +1,52 @@
+{
+  "_fv": 24,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:Moonbio"
+      }
+    ],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "Blocks.END_STONE"
+    },
+    "fluidBlock": {
+      "value": "Blocks.END_STONE"
+    },
+    "airColor": {
+      "value": -16777216,
+      "falpha": 0.0
+    },
+    "canRespawnHere": true,
+    "hasFog": false,
+    "isDark": false,
+    "doesWaterVaporize": true,
+    "sleepResult": "DENY",
+    "hasSkyLight": true,
+    "imitateOverworldBehaviour": false,
+    "onPlayerEntersDimension": {
+      "name": "UnstableEssencepposiyonnoXiaoGuogaKaiShiShiYongsaretatoki"
+    },
+    "onPlayerLeavesDimension": {
+      "name": "Break_potion"
+    },
+    "portalFrame": {
+      "value": "Blocks.BEDROCK"
+    },
+    "portalParticles": {
+      "value": "SOUL"
+    },
+    "portalLuminance": 0,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Moondim Portal Igniter",
+    "igniterTab": {
+      "value": "CUSTOM:DestinyLoC"
+    },
+    "texture": "destiny_gem",
+    "portalTexture": "void",
+    "enablePortal": true
+  }
+}
