@@ -32,21 +32,21 @@ import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
 import net.destiny.destinyloc.itemgroup.DestinyLoCWeaponItemGroup;
-import net.destiny.destinyloc.entity.renderer.Khvostov7G02Renderer;
+import net.destiny.destinyloc.entity.renderer.ShadowPriceRenderer;
 import net.destiny.destinyloc.DestinyLocModElements;
 
 import java.util.Random;
 
 @DestinyLocModElements.ModElement.Tag
-public class Khvostov7G02Item extends DestinyLocModElements.ModElement {
-	@ObjectHolder("destiny_loc:khvostov_7_g_02")
+public class ShadowPriceItem extends DestinyLocModElements.ModElement {
+	@ObjectHolder("destiny_loc:shadow_price")
 	public static final Item block = null;
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-			.size(0.5f, 0.5f)).build("entitybulletkhvostov_7_g_02").setRegistryName("entitybulletkhvostov_7_g_02");
-	public Khvostov7G02Item(DestinyLocModElements instance) {
-		super(instance, 55);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new Khvostov7G02Renderer.ModelRegisterHandler());
+			.size(0.5f, 0.5f)).build("entitybulletshadow_price").setRegistryName("entitybulletshadow_price");
+	public ShadowPriceItem(DestinyLocModElements instance) {
+		super(instance, 122);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ShadowPriceRenderer.ModelRegisterHandler());
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class Khvostov7G02Item extends DestinyLocModElements.ModElement {
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
 			super(new Item.Properties().group(DestinyLoCWeaponItemGroup.tab).maxDamage(100));
-			setRegistryName("khvostov_7_g_02");
+			setRegistryName("shadow_price");
 		}
 
 		@Override
@@ -96,7 +96,7 @@ public class Khvostov7G02Item extends DestinyLocModElements.ModElement {
 						}
 					}
 					if (entity.abilities.isCreativeMode || stack != ItemStack.EMPTY) {
-						ArrowCustomEntity entityarrow = shoot(world, entity, random, 1.2000000000000002f, 7, 1);
+						ArrowCustomEntity entityarrow = shoot(world, entity, random, 1.2000000000000002f, 9.6, 1);
 						itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 						if (entity.abilities.isCreativeMode) {
 							entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
@@ -199,7 +199,7 @@ public class Khvostov7G02Item extends DestinyLocModElements.ModElement {
 		double d3 = target.getPosZ() - entity.getPosZ();
 		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1.2000000000000002f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setDamage(7);
+		entityarrow.setDamage(9.6);
 		entityarrow.setKnockbackStrength(1);
 		entityarrow.setIsCritical(false);
 		entity.world.addEntity(entityarrow);

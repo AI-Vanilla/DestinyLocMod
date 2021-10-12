@@ -1571,6 +1571,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "ShadowPrice",
+      "type": "rangeditem",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_price"
     }
   ],
   "variable_elements": [],
@@ -1624,6 +1633,7 @@
       "entity.destiny_loc.europa_zombie": "Europa Zombie",
       "item.destiny_loc.ingot_engram": "Ingot Engram",
       "item.destiny_loc.origin_story": "Origin Story",
+      "item.destiny_loc.shadow_price": "Shadow Price",
       "item.destiny_loc.heavygunpowder": "Heavy Gunpowder",
       "item.minecraft.potion.effect.voidof_space": "Voidof Space",
       "entity.destiny_loc.vanilla_essence_exo": "Vanilla1, Essence Exo",
@@ -1701,6 +1711,7 @@
       "entity.destiny_loc.europa_zombie": "エウロパゾンビ",
       "item.destiny_loc.ingot_engram": "鉱物エングラム",
       "item.destiny_loc.origin_story": "オリジンストーリー",
+      "item.destiny_loc.shadow_price": "Age-Old Bond",
       "item.destiny_loc.heavygunpowder": "重火薬",
       "item.minecraft.potion.effect.voidof_space": "Voidof Space",
       "entity.destiny_loc.vanilla_essence_exo": "バニラ、エッセンスエクソ",
@@ -1738,7 +1749,7 @@
   "workspaceSettings": {
     "modid": "destiny_loc",
     "modName": "Destiny LoC",
-    "version": "1.0.185",
+    "version": "1.0.194",
     "description": "for Light our Craft Server Mods",
     "author": "Vanilla",
     "websiteURL": "https://twitter.com/Vanilla_JP",

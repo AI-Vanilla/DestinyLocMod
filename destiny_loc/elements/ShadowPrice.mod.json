@@ -3,12 +3,10 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "seventh_seraph_carbine",
+    "texture": "shadow_price",
     "customModelName": "Normal",
-    "name": "Seventh Seraph Carbine",
-    "specialInfo": [
-      "Seventh Seraph Carbine"
-    ],
+    "name": "Shadow Price",
+    "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:DestinyLoCWeapon"
     },
@@ -26,7 +24,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "bulletPower": 1.2000000000000002,
-    "bulletDamage": 9.0,
+    "bulletDamage": 9.6,
     "bulletKnockback": 1,
     "bulletParticles": false,
     "bulletIgnitesFire": false,
