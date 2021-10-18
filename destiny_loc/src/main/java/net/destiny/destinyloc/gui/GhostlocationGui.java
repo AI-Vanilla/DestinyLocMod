@@ -22,6 +22,7 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.ScreenManager;
 
+import net.destiny.destinyloc.procedures.TPthetowerProcedure;
 import net.destiny.destinyloc.procedures.OpenseasonProcedure;
 import net.destiny.destinyloc.procedures.OpenmapoverworldProcedure;
 import net.destiny.destinyloc.procedures.OpenmapmarsProcedure;
@@ -256,6 +257,13 @@ public class GhostlocationGui extends DestinyLocModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				OpenmaplegendaryProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 11) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				TPthetowerProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}
