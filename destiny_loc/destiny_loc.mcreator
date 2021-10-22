@@ -1597,6 +1597,79 @@
           }
         ]
       }
+    },
+    {
+      "name": "Candy2021",
+      "type": "item",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "candy_2021"
+    },
+    {
+      "name": "Eat_candy",
+      "type": "procedure",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "eat_candy",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TheCandy",
+      "type": "food",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "the_candy"
+    },
+    {
+      "name": "Candyman",
+      "type": "livingentity",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "candyman"
+    },
+    {
+      "name": "Drop_candy",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drop_candy",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -1605,14 +1678,17 @@
     "en_us": {
       "item.destiny_loc.europa_zombie_spawn_egg": "Europa Zombie Spawn Egg",
       "itemGroup.tabdestiny_lo_c": "Destiny LoC",
+      "item.destiny_loc.the_candy": "The Candy",
       "item.destiny_loc.vanilla_lv_50": "Vanilla Super Charger Drone",
       "biome.destiny_loc.subspacebio": "Subspacebio",
       "item.destiny_loc.vanilla_essence_exo_spawn_egg": "Vanilla1, Essence Exo Spawn Egg",
       "effect.copyoftheduplicate": "Copy of the duplicate",
       "item.destiny_loc.enhanced_prism": "Enhanced Prism",
+      "item.destiny_loc.candy_2021": "2021 The Lost Candy",
       "effect.voidof_space": "Void of Space",
       "item.destiny_loc.vanilla_essence_exo_1_spawn_egg": "Vanilla, Essence Exo Spawn Egg",
       "item.destiny_loc.moondim": "Moondim Portal Igniter",
+      "item.destiny_loc.candyman_spawn_egg": "Candy man Spawn Egg",
       "effect.threatofduplicates": "Threat of duplicates",
       "item.minecraft.lingering_potion.effect.voidof_space": "Lingering Voidof Space",
       "item.destiny_loc.valhalla_prime_engram": "Valhalla Prime Engram",
@@ -1661,6 +1737,7 @@
       "block.destiny_loc.legendary_block": "Block of Legendary",
       "item.destiny_loc.legendary_ingot": "Legendary",
       "effect.hatred": "Duplicate Deletion",
+      "entity.destiny_loc.candyman": "Candy man",
       "biome.destiny_loc.space": "Space",
       "effect.unstable_essencep": "Unstable Essence",
       "item.minecraft.lingering_potion.effect.hatred": "Lingering Hatred",
@@ -1682,15 +1759,18 @@
     },
     "ja_jp": {
       "item.destiny_loc.europa_zombie_spawn_egg": "Europa Zombie Spawn Egg",
+      "item.destiny_loc.the_candy": "キャンディ",
       "itemGroup.tabdestiny_lo_c": "Destiny LoC",
       "item.destiny_loc.vanilla_lv_50": "バニラスーパーチャージャードローン",
       "item.destiny_loc.vanilla_essence_exo_spawn_egg": "Vanilla1, Essence Exo Spawn Egg",
       "biome.destiny_loc.subspacebio": "亜空間",
       "effect.copyoftheduplicate": "複製体のコピー",
       "item.destiny_loc.enhanced_prism": "強化プリズム",
+      "item.destiny_loc.candy_2021": "2021年 死者のキャンディ",
       "effect.voidof_space": "宇宙空間",
       "item.destiny_loc.vanilla_essence_exo_1_spawn_egg": "Vanilla, Essence Exo Spawn Egg",
       "item.destiny_loc.moondim": "Moondim Portal Igniter",
+      "item.destiny_loc.candyman_spawn_egg": "Candy man Spawn Egg",
       "effect.threatofduplicates": "複製体の脅威",
       "item.minecraft.lingering_potion.effect.voidof_space": "Lingering Voidof Space",
       "item.destiny_loc.valhalla_prime_engram": "ヴァルハラ プライムエングラム",
@@ -1728,7 +1808,7 @@
       "entity.destiny_loc.europa_zombie": "エウロパゾンビ",
       "item.destiny_loc.ingot_engram": "鉱物エングラム",
       "item.destiny_loc.origin_story": "オリジンストーリー",
-      "item.destiny_loc.shadow_price": "Age-Old Bond",
+      "item.destiny_loc.shadow_price": "シャドウピース",
       "item.destiny_loc.heavygunpowder": "重火薬",
       "item.minecraft.potion.effect.voidof_space": "Voidof Space",
       "entity.destiny_loc.vanilla_essence_exo": "バニラ、エッセンスエクソ",
@@ -1739,12 +1819,13 @@
       "block.destiny_loc.legendary_block": "レジェンダリーブロック",
       "item.destiny_loc.legendary_ingot": "レジェンダリーインゴット",
       "effect.hatred": "重複削除",
+      "entity.destiny_loc.candyman": "[Lv1] 噂されたキャンディ野郎",
       "biome.destiny_loc.space": "宇宙",
       "effect.unstable_essencep": "不安定なエッセンス",
       "item.minecraft.lingering_potion.effect.hatred": "Lingering Hatred",
       "item.destiny_loc.vanilla_lv_20": "バニラチャージャードローン",
       "item.destiny_loc.ether_doctor": "エーテル・ドクター",
-      "key.destiny_loc.open_ghost": "Navigation",
+      "key.destiny_loc.open_ghost": "ナビゲーションゴースト",
       "item.destiny_loc.cuboid_aru": "キュボイドARU",
       "item.minecraft.potion.effect.hatred": "Hatred",
       "item.destiny_loc.deep_stone_crypt_exotic_engram": "ディープストーンクリプト エキゾチックエングラム",
@@ -1766,7 +1847,7 @@
   "workspaceSettings": {
     "modid": "destiny_loc",
     "modName": "Destiny LoC",
-    "version": "1.0.201",
+    "version": "1.0.211",
     "description": "for Light our Craft Server Mods",
     "author": "Vanilla",
     "websiteURL": "https://twitter.com/Vanilla_JP",
