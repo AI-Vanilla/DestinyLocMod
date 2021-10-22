@@ -1670,6 +1670,69 @@
           }
         ]
       }
+    },
+    {
+      "name": "Candy2021eventrecipe1",
+      "type": "recipe",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "candy_2021eventrecipe_1"
+    },
+    {
+      "name": "Candy2021eventrecipe2",
+      "type": "recipe",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "candy_2021eventrecipe_2"
+    },
+    {
+      "name": "Candy2021eventrecipe3",
+      "type": "recipe",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "candy_2021eventrecipe_3"
+    },
+    {
+      "name": "Candy2021eventrecipe4",
+      "type": "recipe",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "candy_2021eventrecipe_4"
+    },
+    {
+      "name": "Candy2021eventrecipe5",
+      "type": "recipe",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "candy_2021eventrecipe_5"
+    },
+    {
+      "name": "Candy2021eventrecipe6",
+      "type": "recipe",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "candy_2021eventrecipe_6"
+    },
+    {
+      "name": "Candy2021eventrecipe7",
+      "type": "recipe",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "candy_2021eventrecipe_7"
     }
   ],
   "variable_elements": [],
@@ -1847,7 +1910,7 @@
   "workspaceSettings": {
     "modid": "destiny_loc",
     "modName": "Destiny LoC",
-    "version": "1.0.211",
+    "version": "1.0.218",
     "description": "for Light our Craft Server Mods",
     "author": "Vanilla",
     "websiteURL": "https://twitter.com/Vanilla_JP",

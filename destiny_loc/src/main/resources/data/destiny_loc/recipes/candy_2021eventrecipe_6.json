@@ -1,0 +1,42 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "destiny_loc:candy_2021"
+    },
+    "1": {
+      "item": "destiny_loc:candy_2021"
+    },
+    "2": {
+      "item": "destiny_loc:candy_2021"
+    },
+    "3": {
+      "item": "destiny_loc:candy_2021"
+    },
+    "4": {
+      "item": "destiny_loc:the_candy"
+    },
+    "5": {
+      "item": "destiny_loc:candy_2021"
+    },
+    "6": {
+      "item": "destiny_loc:candy_2021"
+    },
+    "7": {
+      "item": "destiny_loc:candy_2021"
+    },
+    "8": {
+      "item": "destiny_loc:candy_2021"
+    }
+  },
+  "result": {
+    "item": "minecraft:diamond",
+    "count": 1
+  }
+}
