@@ -1733,6 +1733,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "candy_2021eventrecipe_7"
+    },
+    {
+      "name": "Gunammokinetic",
+      "type": "recipe",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gunammokinetic"
     }
   ],
   "variable_elements": [],
@@ -1910,7 +1919,7 @@
   "workspaceSettings": {
     "modid": "destiny_loc",
     "modName": "Destiny LoC",
-    "version": "1.0.218",
+    "version": "1.0.220",
     "description": "for Light our Craft Server Mods",
     "author": "Vanilla",
     "websiteURL": "https://twitter.com/Vanilla_JP",
