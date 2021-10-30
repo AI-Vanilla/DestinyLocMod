@@ -20,10 +20,10 @@
       "value": "entity.arrow.shoot"
     },
     "hasGlow": false,
-    "animation": "none",
+    "animation": "bow",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "bulletPower": 1.2000000000000002,
+    "bulletPower": 1.0,
     "bulletDamage": 11.0,
     "bulletKnockback": 1,
     "bulletParticles": false,

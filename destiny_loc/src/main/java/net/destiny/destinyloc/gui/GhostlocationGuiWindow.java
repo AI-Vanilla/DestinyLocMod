@@ -70,8 +70,6 @@ public class GhostlocationGuiWindow extends ContainerScreen<GhostlocationGui.Gui
 		this.blit(ms, this.guiLeft + 329, this.guiTop + 142, 0, 0, 16, 16, 16, 16);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/primequest.png"));
 		this.blit(ms, this.guiLeft + 93, this.guiTop + 24, 0, 0, 43, 44, 43, 44);
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/apple.png"));
-		this.blit(ms, this.guiLeft + 194, this.guiTop + 76, 0, 0, 16, 16, 16, 16);
 		RenderSystem.disableBlend();
 	}
 
@@ -168,12 +166,6 @@ public class GhostlocationGuiWindow extends ContainerScreen<GhostlocationGui.Gui
 			if (true) {
 				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostlocationGui.ButtonPressedMessage(10, x, y, z));
 				GhostlocationGui.handleButtonAction(entity, 10, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 166, this.guiTop + 91, 70, 20, new StringTextComponent("THE TOWER"), e -> {
-			if (true) {
-				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostlocationGui.ButtonPressedMessage(11, x, y, z));
-				GhostlocationGui.handleButtonAction(entity, 11, x, y, z);
 			}
 		}));
 	}

@@ -18,7 +18,7 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.ActionResult;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.UseAction;
-import net.minecraft.item.ShootableItem;
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
@@ -29,24 +29,26 @@ import net.minecraft.entity.IRendersAsItem;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
-import net.minecraft.block.Blocks;
 
-import net.destiny.destinyloc.itemgroup.DestinyLoCWeaponItemGroup;
-import net.destiny.destinyloc.entity.renderer.ShadowPriceRenderer;
+import net.destiny.destinyloc.procedures.Hit_player_nightmare_arrowProcedure;
+import net.destiny.destinyloc.itemgroup.DestinyLoCItemGroup;
+import net.destiny.destinyloc.entity.renderer.NIGHTMAREBOWRenderer;
 import net.destiny.destinyloc.DestinyLocModElements;
 
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
 
 @DestinyLocModElements.ModElement.Tag
-public class ShadowPriceItem extends DestinyLocModElements.ModElement {
-	@ObjectHolder("destiny_loc:shadow_price")
+public class NIGHTMAREBOWItem extends DestinyLocModElements.ModElement {
+	@ObjectHolder("destiny_loc:nightmarebow")
 	public static final Item block = null;
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-			.size(0.5f, 0.5f)).build("entitybulletshadow_price").setRegistryName("entitybulletshadow_price");
-	public ShadowPriceItem(DestinyLocModElements instance) {
-		super(instance, 122);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new ShadowPriceRenderer.ModelRegisterHandler());
+			.size(0.5f, 0.5f)).build("entitybulletnightmarebow").setRegistryName("entitybulletnightmarebow");
+	public NIGHTMAREBOWItem(DestinyLocModElements instance) {
+		super(instance, 117);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new NIGHTMAREBOWRenderer.ModelRegisterHandler());
 	}
 
 	@Override
@@ -56,8 +58,8 @@ public class ShadowPriceItem extends DestinyLocModElements.ModElement {
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(DestinyLoCWeaponItemGroup.tab).maxDamage(100));
-			setRegistryName("shadow_price");
+			super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxDamage(100));
+			setRegistryName("nightmarebow");
 		}
 
 		@Override
@@ -68,7 +70,7 @@ public class ShadowPriceItem extends DestinyLocModElements.ModElement {
 
 		@Override
 		public UseAction getUseAction(ItemStack itemstack) {
-			return UseAction.NONE;
+			return UseAction.BOW;
 		}
 
 		@Override
@@ -77,45 +79,22 @@ public class ShadowPriceItem extends DestinyLocModElements.ModElement {
 		}
 
 		@Override
-		public void onUsingTick(ItemStack itemstack, LivingEntity entityLiving, int count) {
-			World world = entityLiving.world;
+		@OnlyIn(Dist.CLIENT)
+		public boolean hasEffect(ItemStack itemstack) {
+			return true;
+		}
+
+		@Override
+		public void onPlayerStoppedUsing(ItemStack itemstack, World world, LivingEntity entityLiving, int timeLeft) {
 			if (!world.isRemote && entityLiving instanceof ServerPlayerEntity) {
 				ServerPlayerEntity entity = (ServerPlayerEntity) entityLiving;
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
 				if (true) {
-					ItemStack stack = ShootableItem.getHeldAmmo(entity, e -> e.getItem() == KineticbulletItem.block);
-					if (stack == ItemStack.EMPTY) {
-						for (int i = 0; i < entity.inventory.mainInventory.size(); i++) {
-							ItemStack teststack = entity.inventory.mainInventory.get(i);
-							if (teststack != null && teststack.getItem() == KineticbulletItem.block) {
-								stack = teststack;
-								break;
-							}
-						}
-					}
-					if (entity.abilities.isCreativeMode || stack != ItemStack.EMPTY) {
-						ArrowCustomEntity entityarrow = shoot(world, entity, random, 1.2000000000000002f, 9.6, 1);
-						itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
-						if (entity.abilities.isCreativeMode) {
-							entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
-						} else {
-							if (new ItemStack(KineticbulletItem.block).isDamageable()) {
-								if (stack.attemptDamageItem(1, random, entity)) {
-									stack.shrink(1);
-									stack.setDamage(0);
-									if (stack.isEmpty())
-										entity.inventory.deleteStack(stack);
-								}
-							} else {
-								stack.shrink(1);
-								if (stack.isEmpty())
-									entity.inventory.deleteStack(stack);
-							}
-						}
-					}
-					entity.stopActiveHand();
+					ArrowCustomEntity entityarrow = shoot(world, entity, random, 1.5f, 16, 0);
+					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
+					entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.DISALLOWED;
 				}
 			}
 		}
@@ -147,12 +126,28 @@ public class ShadowPriceItem extends DestinyLocModElements.ModElement {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(Blocks.STONE_BUTTON);
+			return new ItemStack(Items.PURPLE_DYE);
 		}
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return new ItemStack(KineticbulletItem.block);
+			return null;
+		}
+
+		@Override
+		public void onCollideWithPlayer(PlayerEntity entity) {
+			super.onCollideWithPlayer(entity);
+			Entity sourceentity = this.func_234616_v_();
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			World world = this.world;
+			Entity imediatesourceentity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				Hit_player_nightmare_arrowProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
@@ -179,15 +174,16 @@ public class ShadowPriceItem extends DestinyLocModElements.ModElement {
 		ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
 		entityarrow.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, power * 2, 0);
 		entityarrow.setSilent(true);
-		entityarrow.setIsCritical(false);
+		entityarrow.setIsCritical(true);
 		entityarrow.setDamage(damage);
 		entityarrow.setKnockbackStrength(knockback);
+		entityarrow.setFire(100);
 		world.addEntity(entityarrow);
 		double x = entity.getPosX();
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")),
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.blaze.shoot")),
 				SoundCategory.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
@@ -197,17 +193,18 @@ public class ShadowPriceItem extends DestinyLocModElements.ModElement {
 		double d0 = target.getPosY() + (double) target.getEyeHeight() - 1.1;
 		double d1 = target.getPosX() - entity.getPosX();
 		double d3 = target.getPosZ() - entity.getPosZ();
-		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1.2000000000000002f * 2, 12.0F);
+		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1.5f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setDamage(9.6);
-		entityarrow.setKnockbackStrength(1);
-		entityarrow.setIsCritical(false);
+		entityarrow.setDamage(16);
+		entityarrow.setKnockbackStrength(0);
+		entityarrow.setIsCritical(true);
+		entityarrow.setFire(100);
 		entity.world.addEntity(entityarrow);
 		double x = entity.getPosX();
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		entity.world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")),
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.blaze.shoot")),
 				SoundCategory.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}

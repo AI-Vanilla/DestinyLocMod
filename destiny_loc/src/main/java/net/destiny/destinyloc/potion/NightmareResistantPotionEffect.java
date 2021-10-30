@@ -6,22 +6,14 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
-import net.minecraft.world.World;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effect;
-import net.minecraft.entity.ai.attributes.AttributeModifierManager;
-import net.minecraft.entity.LivingEntity;
-
-import net.destiny.destinyloc.procedures.UnstableEssencepposiyonnoXiaoGuogaKaiShiShiYongsaretatokiProcedure;
-
-import java.util.Map;
-import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class UnstableEssencepPotionEffect {
-	@ObjectHolder("destiny_loc:unstable_essencep")
+public class NightmareResistantPotionEffect {
+	@ObjectHolder("destiny_loc:nightmare_resistant")
 	public static final Effect potion = null;
 	@SubscribeEvent
 	public static void registerEffect(RegistryEvent.Register<Effect> event) {
@@ -30,14 +22,14 @@ public class UnstableEssencepPotionEffect {
 	public static class EffectCustom extends Effect {
 		private final ResourceLocation potionIcon;
 		public EffectCustom() {
-			super(EffectType.BENEFICIAL, -1);
-			setRegistryName("unstable_essencep");
-			potionIcon = new ResourceLocation("destiny_loc:textures/sworddiamond.png");
+			super(EffectType.BENEFICIAL, -16777216);
+			setRegistryName("nightmare_resistant");
+			potionIcon = new ResourceLocation("destiny_loc:textures/posion_good.png");
 		}
 
 		@Override
 		public String getName() {
-			return "effect.unstable_essencep";
+			return "effect.nightmare_resistant";
 		}
 
 		@Override
@@ -63,19 +55,6 @@ public class UnstableEssencepPotionEffect {
 		@Override
 		public boolean shouldRenderHUD(EffectInstance effect) {
 			return true;
-		}
-
-		@Override
-		public void applyAttributesModifiersToEntity(LivingEntity entity, AttributeModifierManager attributeMapIn, int amplifier) {
-			World world = entity.world;
-			double x = entity.getPosX();
-			double y = entity.getPosY();
-			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				UnstableEssencepposiyonnoXiaoGuogaKaiShiShiYongsaretatokiProcedure.executeProcedure($_dependencies);
-			}
 		}
 
 		@Override

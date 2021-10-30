@@ -26,7 +26,7 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
-import net.minecraft.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -115,7 +115,7 @@ public class EuropaZombieEntity extends DestinyLocModElements.ModElement {
 			super.registerGoals();
 			this.goalSelector.addGoal(1, new LookRandomlyGoal(this));
 			this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.7));
-			this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 0.75, false));
+			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, EuropaZombieEntity.CustomEntity.class, true, false));
 		}
 
 		@Override
