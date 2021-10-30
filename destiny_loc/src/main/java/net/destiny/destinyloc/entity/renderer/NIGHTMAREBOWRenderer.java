@@ -9,15 +9,15 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.client.Minecraft;
 
-import net.destiny.destinyloc.item.ShadowPriceItem;
+import net.destiny.destinyloc.item.NIGHTMAREBOWItem;
 
 @OnlyIn(Dist.CLIENT)
-public class ShadowPriceRenderer {
+public class NIGHTMAREBOWRenderer {
 	public static class ModelRegisterHandler {
 		@SubscribeEvent
 		@OnlyIn(Dist.CLIENT)
 		public void registerModels(ModelRegistryEvent event) {
-			RenderingRegistry.registerEntityRenderingHandler(ShadowPriceItem.arrow,
+			RenderingRegistry.registerEntityRenderingHandler(NIGHTMAREBOWItem.arrow,
 					renderManager -> new SpriteRenderer(renderManager, Minecraft.getInstance().getItemRenderer()));
 		}
 	}

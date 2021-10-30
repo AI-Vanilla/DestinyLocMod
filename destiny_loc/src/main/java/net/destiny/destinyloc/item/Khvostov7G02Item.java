@@ -68,7 +68,7 @@ public class Khvostov7G02Item extends DestinyLocModElements.ModElement {
 
 		@Override
 		public UseAction getUseAction(ItemStack itemstack) {
-			return UseAction.NONE;
+			return UseAction.BOW;
 		}
 
 		@Override

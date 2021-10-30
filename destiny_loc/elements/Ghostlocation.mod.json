@@ -244,30 +244,6 @@
           "x": 107,
           "y": 47
         }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "apple.png",
-          "use1Xscale": false,
-          "name": "apple.png",
-          "x": 208,
-          "y": 99
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "THE TOWER",
-          "onClick": {
-            "name": "TPthetower"
-          },
-          "width": 70,
-          "height": 20,
-          "name": "THE TOWER",
-          "x": 180,
-          "y": 114
-        }
       }
     ],
     "gridSettings": {
