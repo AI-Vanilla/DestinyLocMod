@@ -1,0 +1,12 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:smelting",
+  "experience": 50,
+  "cookingtime": 60,
+  "ingredient": {
+    "item": "destiny_loc:candy_2021"
+  },
+  "result": {
+    "item": "destiny_loc:the_candy"
+  }
+}

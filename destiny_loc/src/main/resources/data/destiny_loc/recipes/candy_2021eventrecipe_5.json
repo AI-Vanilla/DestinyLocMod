@@ -1,0 +1,25 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "destiny_loc:candy_2021"
+    },
+    {
+      "item": "destiny_loc:candy_2021"
+    },
+    {
+      "item": "destiny_loc:candy_2021"
+    },
+    {
+      "item": "destiny_loc:candy_2021"
+    },
+    {
+      "item": "destiny_loc:candy_2021"
+    }
+  ],
+  "result": {
+    "item": "minecraft:emerald",
+    "count": 1
+  }
+}
