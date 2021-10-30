@@ -12,7 +12,6 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.ArmorItem;
@@ -22,6 +21,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
 
 import net.destiny.destinyloc.procedures.DreamVeinmodProcedure;
+import net.destiny.destinyloc.itemgroup.DestinyLocArmorItemGroup;
 import net.destiny.destinyloc.DestinyLocModElements;
 
 import java.util.Map;
@@ -86,7 +86,7 @@ public class DREAMVEINItem extends DestinyLocModElements.ModElement {
 				return 0.1f;
 			}
 		};
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)) {
+		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(DestinyLocArmorItemGroup.tab)) {
 			@Override
 			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 				super.addInformation(itemstack, world, list, flag);
@@ -111,7 +111,7 @@ public class DREAMVEINItem extends DestinyLocModElements.ModElement {
 				}
 			}
 		}.setRegistryName("dreamvein_helmet"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)) {
+		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(DestinyLocArmorItemGroup.tab)) {
 			@Override
 			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 				super.addInformation(itemstack, world, list, flag);
@@ -135,7 +135,7 @@ public class DREAMVEINItem extends DestinyLocModElements.ModElement {
 				}
 			}
 		}.setRegistryName("dreamvein_chestplate"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)) {
+		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(DestinyLocArmorItemGroup.tab)) {
 			@Override
 			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 				super.addInformation(itemstack, world, list, flag);
@@ -159,7 +159,7 @@ public class DREAMVEINItem extends DestinyLocModElements.ModElement {
 				}
 			}
 		}.setRegistryName("dreamvein_leggings"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)) {
+		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(DestinyLocArmorItemGroup.tab)) {
 			@Override
 			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 				super.addInformation(itemstack, world, list, flag);
