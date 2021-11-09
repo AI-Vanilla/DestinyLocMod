@@ -1532,6 +1532,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "destiny_loc_armor"
+    },
+    {
+      "name": "Bequest",
+      "type": "item",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bequest"
     }
   ],
   "variable_elements": [],
@@ -1553,6 +1562,7 @@
       "block.destiny_loc.crypt_security": "Crypt Security",
       "item.destiny_loc.dreamvein_helmet": "DREAMVEIN helmet",
       "item.destiny_loc.dreamvein_chestplate": "DREAMVEIN chestplate",
+      "item.destiny_loc.bequest": "Bequest",
       "item.destiny_loc.vanilla_lv_100": "Vanilla Ultimate Charger Drone",
       "effect.shared_destiny": "Shared Destiny",
       "item.destiny_loc.europad": "Europad Portal Igniter",
@@ -1634,6 +1644,7 @@
       "block.destiny_loc.crypt_security": "クリプトセキュリティ",
       "item.destiny_loc.dreamvein_helmet": "ドリームベインのヘルメット",
       "item.destiny_loc.dreamvein_chestplate": "ドリームベインのチェストプレート",
+      "item.destiny_loc.bequest": "遺贈",
       "item.destiny_loc.vanilla_lv_100": "バニラアルティメットチャージャードローン",
       "effect.shared_destiny": "共有された運命",
       "item.destiny_loc.europad": "Europad Portal Igniter",
@@ -1707,7 +1718,7 @@
   "workspaceSettings": {
     "modid": "destiny_loc",
     "modName": "Destiny LoC",
-    "version": "1.0.245",
+    "version": "1.0.247",
     "description": "for Light our Craft Server Mods",
     "author": "Vanilla",
     "websiteURL": "https://twitter.com/Vanilla_JP",

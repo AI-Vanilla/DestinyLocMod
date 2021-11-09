@@ -1,23 +1,28 @@
 {
   "group": "destiny_loc",
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    " 4 ",
+    "678"
+  ],
+  "key": {
+    "1": {
       "item": "minecraft:bone_block"
     },
-    {
+    "4": {
       "item": "minecraft:bone_block"
     },
-    {
+    "6": {
       "item": "minecraft:iron_ingot"
     },
-    {
+    "7": {
       "item": "minecraft:stick"
     },
-    {
+    "8": {
       "item": "minecraft:iron_ingot"
     }
-  ],
+  },
   "result": {
     "item": "destiny_loc:swordoffortitude",
     "count": 1
