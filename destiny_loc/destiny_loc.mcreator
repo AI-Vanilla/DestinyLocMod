@@ -1541,6 +1541,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "bequest"
+    },
+    {
+      "name": "Bequestrecipe",
+      "type": "recipe",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bequestrecipe"
     }
   ],
   "variable_elements": [],
@@ -1718,7 +1727,7 @@
   "workspaceSettings": {
     "modid": "destiny_loc",
     "modName": "Destiny LoC",
-    "version": "1.0.247",
+    "version": "1.0.249",
     "description": "for Light our Craft Server Mods",
     "author": "Vanilla",
     "websiteURL": "https://twitter.com/Vanilla_JP",
