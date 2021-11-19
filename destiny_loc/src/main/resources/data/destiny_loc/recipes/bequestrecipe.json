@@ -1,0 +1,16 @@
+{
+  "group": "destiny_loc",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "destiny_loc:deep_stone_crypt_exotic_engram"
+    }
+  },
+  "result": {
+    "item": "destiny_loc:bequest",
+    "count": 1
+  }
+}

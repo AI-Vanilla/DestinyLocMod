@@ -13,7 +13,16 @@
         "value": ""
       },
       {
-        "value": "Blocks.BONE_BLOCK"
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:DeepStoneCryptExoticEngram"
       },
       {
         "value": ""
@@ -22,25 +31,16 @@
         "value": ""
       },
       {
-        "value": "Blocks.BONE_BLOCK"
-      },
-      {
         "value": ""
       },
       {
-        "value": "Items.IRON_INGOT"
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": "Items.IRON_INGOT"
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Swordoffortitude"
+      "value": "CUSTOM:Bequest"
     },
-    "name": "sword_of_fortituderecipe",
+    "name": "bequestrecipe",
     "namespace": "mod"
   }
 }
