@@ -65,11 +65,11 @@ public class GhostlocationGuiWindow extends ContainerScreen<GhostlocationGui.Gui
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/posion_bad.png"));
 		this.blit(ms, this.guiLeft + 26, this.guiTop + 32, 0, 0, 16, 16, 16, 16);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/posion_bad.png"));
-		this.blit(ms, this.guiLeft + 261, this.guiTop + 55, 0, 0, 16, 16, 16, 16);
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/posion_bad.png"));
 		this.blit(ms, this.guiLeft + 329, this.guiTop + 142, 0, 0, 16, 16, 16, 16);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/primequest.png"));
 		this.blit(ms, this.guiLeft + 93, this.guiTop + 24, 0, 0, 43, 44, 43, 44);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
+		this.blit(ms, this.guiLeft + 261, this.guiTop + 54, 0, 0, 16, 16, 16, 16);
 		RenderSystem.disableBlend();
 	}
 
@@ -144,25 +144,25 @@ public class GhostlocationGuiWindow extends ContainerScreen<GhostlocationGui.Gui
 				GhostlocationGui.handleButtonAction(entity, 6, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 255, this.guiTop + 71, 30, 20, new StringTextComponent("?"), e -> {
+		this.addButton(new Button(this.guiLeft + 19, this.guiTop + 49, 30, 20, new StringTextComponent("?"), e -> {
 			if (true) {
 				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostlocationGui.ButtonPressedMessage(7, x, y, z));
 				GhostlocationGui.handleButtonAction(entity, 7, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 19, this.guiTop + 49, 30, 20, new StringTextComponent("?"), e -> {
+		this.addButton(new Button(this.guiLeft + 322, this.guiTop + 158, 30, 20, new StringTextComponent("?"), e -> {
 			if (true) {
 				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostlocationGui.ButtonPressedMessage(8, x, y, z));
 				GhostlocationGui.handleButtonAction(entity, 8, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 322, this.guiTop + 158, 30, 20, new StringTextComponent("?"), e -> {
+		this.addButton(new Button(this.guiLeft + 79, this.guiTop + 62, 70, 20, new StringTextComponent("Legendary"), e -> {
 			if (true) {
 				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostlocationGui.ButtonPressedMessage(9, x, y, z));
 				GhostlocationGui.handleButtonAction(entity, 9, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 79, this.guiTop + 62, 70, 20, new StringTextComponent("Legendary"), e -> {
+		this.addButton(new Button(this.guiLeft + 246, this.guiTop + 70, 45, 20, new StringTextComponent("Moon"), e -> {
 			if (true) {
 				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostlocationGui.ButtonPressedMessage(10, x, y, z));
 				GhostlocationGui.handleButtonAction(entity, 10, x, y, z);

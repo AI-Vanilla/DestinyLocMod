@@ -23,13 +23,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.ScreenManager;
 
 import net.destiny.destinyloc.procedures.OpenseasonProcedure;
-import net.destiny.destinyloc.procedures.OpenmapoverworldProcedure;
-import net.destiny.destinyloc.procedures.OpenmapmarsProcedure;
-import net.destiny.destinyloc.procedures.OpenmaplegendaryProcedure;
-import net.destiny.destinyloc.procedures.OpenmapeuropaProcedure;
-import net.destiny.destinyloc.procedures.OpenmapdeeplandProcedure;
-import net.destiny.destinyloc.procedures.OpenmapProcedure;
-import net.destiny.destinyloc.procedures.OpenmapMoonProcedure;
+import net.destiny.destinyloc.procedures.OpenlocationProcedure;
 import net.destiny.destinyloc.DestinyLocModElements;
 
 import java.util.function.Supplier;
@@ -37,11 +31,11 @@ import java.util.Map;
 import java.util.HashMap;
 
 @DestinyLocModElements.ModElement.Tag
-public class GhostlocationGui extends DestinyLocModElements.ModElement {
+public class GhostmapMoonGui extends DestinyLocModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public GhostlocationGui(DestinyLocModElements instance) {
-		super(instance, 95);
+	public GhostmapMoonGui(DestinyLocModElements instance) {
+		super(instance, 123);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -52,12 +46,12 @@ public class GhostlocationGui extends DestinyLocModElements.ModElement {
 	private static class ContainerRegisterHandler {
 		@SubscribeEvent
 		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-			event.getRegistry().register(containerType.setRegistryName("ghostlocation"));
+			event.getRegistry().register(containerType.setRegistryName("ghostmap_moon"));
 		}
 	}
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GhostlocationGuiWindow::new));
+		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GhostmapMoonGuiWindow::new));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -182,62 +176,7 @@ public class GhostlocationGui extends DestinyLocModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				OpenmapoverworldProcedure.executeProcedure($_dependencies);
-			}
-		}
 		if (buttonID == 1) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				OpenmapmarsProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 2) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				OpenmapeuropaProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 3) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				OpenmapdeeplandProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 5) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				OpenmapProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 6) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -248,7 +187,7 @@ public class GhostlocationGui extends DestinyLocModElements.ModElement {
 				OpenseasonProcedure.executeProcedure($_dependencies);
 			}
 		}
-		if (buttonID == 9) {
+		if (buttonID == 2) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -256,18 +195,7 @@ public class GhostlocationGui extends DestinyLocModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				OpenmaplegendaryProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 10) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				OpenmapMoonProcedure.executeProcedure($_dependencies);
+				OpenlocationProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}
