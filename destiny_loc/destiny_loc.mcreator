@@ -1550,6 +1550,48 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "bequestrecipe"
+    },
+    {
+      "name": "GhostmapMoon",
+      "type": "gui",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostmap_moon"
+    },
+    {
+      "name": "OpenmapMoon",
+      "type": "procedure",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "openmap_moon",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -1726,11 +1768,11 @@
   },
   "workspaceSettings": {
     "modid": "destiny_loc",
-    "modName": "Destiny LoC",
-    "version": "1.0.249",
-    "description": "for Light our Craft Server Mods",
+    "modName": "Destiny Craft",
+    "version": "1.0.251",
+    "description": "for Destiny Craft Server Mods",
     "author": "Vanilla",
-    "websiteURL": "https://twitter.com/Vanilla_JP",
+    "websiteURL": "https://stellavinfo.wixsite.com/light-our-craft",
     "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
