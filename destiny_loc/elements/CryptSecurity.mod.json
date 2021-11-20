@@ -60,6 +60,9 @@
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
     "colorOnMap": "IRON",
     "creativePickItem": {
       "value": ""
@@ -78,12 +81,27 @@
     "soundOnStep": {
       "value": "ANVIL"
     },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 0,
     "spawnParticles": true,
     "particleToSpawn": {
-      "value": "DRIP_LAVA"
+      "value": "LAVA"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
