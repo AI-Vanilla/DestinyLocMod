@@ -1,0 +1,124 @@
+{
+  "_fv": 24,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "Candy man",
+    "mobLabel": "[Lv1] Candy man",
+    "mobModelName": "Biped",
+    "mobModelTexture": "zombie.png",
+    "mobModelGlowTexture": "",
+    "modelWidth": 1.1,
+    "modelHeight": 2.3000000000000003,
+    "modelShadowSize": 1.0,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "creativeTab": {
+      "value": "CUSTOM:DestinyLoC"
+    },
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": "CUSTOM:TheCandy"
+    },
+    "equipmentOffHand": {
+      "value": "CUSTOM:TheCandy"
+    },
+    "equipmentHelmet": {
+      "value": "Blocks.MAGMA"
+    },
+    "equipmentBody": {
+      "value": "Items.LEATHER_CHESTPLATE"
+    },
+    "equipmentLeggings": {
+      "value": "Items.LEATHER_LEGGINGS"
+    },
+    "equipmentBoots": {
+      "value": "Items.LEATHER_BOOTS"
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEAD",
+    "attackStrength": 4,
+    "attackKnockback": 1.0,
+    "knockbackResistance": 0.0,
+    "movementSpeed": 0.19999999999999998,
+    "armorBaseValue": 0.0,
+    "trackingRange": 50,
+    "health": 150,
+    "xpAmount": 100,
+    "waterMob": false,
+    "flyingMob": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": true,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": true,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": "CUSTOM:TheCandy"
+    },
+    "livingSound": {
+      "value": "entity.blaze.ambient"
+    },
+    "hurtSound": {
+      "value": "entity.cow.hurt"
+    },
+    "deathSound": {
+      "value": "entity.endermen.death"
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "spawnParticles": true,
+    "particleToSpawn": {
+      "value": "BUBBLE_POP"
+    },
+    "particleSpawningShape": "Spread",
+    "particleSpawningRadious": 0.9000000014901162,
+    "particleAmount": 4,
+    "whenMobDies": {
+      "name": "Drop_candy"
+    },
+    "hasAI": true,
+    "aiBase": "Zombie",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"82\" y=\"41\"><next><block type=\"attack_on_collide\"><field name=\"speed\">0.9</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"eat_grass\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": true,
+    "spawningProbability": 10,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 5,
+    "restrictionBiomes": [],
+    "spawnInDungeons": true
+  }
+}

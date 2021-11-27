@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "xpReward": 50.0,
+    "cookingTime": 60,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:Candy2021"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:TheCandy"
+    },
+    "name": "candy_2021eventrecipe_7",
+    "namespace": "mod"
+  }
+}

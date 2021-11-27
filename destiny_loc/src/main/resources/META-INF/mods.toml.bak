@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="destiny_loc"
+version="1.0.299"
+displayName="Destiny Craft"
+credits="Vanilla"
+displayURL="https://stellavinfo.wixsite.com/light-our-craft"
+logoFile="logo.png"
+authors="Vanilla"
+description='''
+for Destiny Craft Server Mods
+'''
+
+[[dependencies.destiny_loc]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

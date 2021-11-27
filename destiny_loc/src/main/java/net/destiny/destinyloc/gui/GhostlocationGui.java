@@ -22,6 +22,7 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.ScreenManager;
 
+import net.destiny.destinyloc.procedures.TPthetowerProcedure;
 import net.destiny.destinyloc.procedures.OpenseasonProcedure;
 import net.destiny.destinyloc.procedures.OpenmapoverworldProcedure;
 import net.destiny.destinyloc.procedures.OpenmapmarsProcedure;
@@ -29,6 +30,7 @@ import net.destiny.destinyloc.procedures.OpenmaplegendaryProcedure;
 import net.destiny.destinyloc.procedures.OpenmapeuropaProcedure;
 import net.destiny.destinyloc.procedures.OpenmapdeeplandProcedure;
 import net.destiny.destinyloc.procedures.OpenmapProcedure;
+import net.destiny.destinyloc.procedures.OpenmapMoonProcedure;
 import net.destiny.destinyloc.DestinyLocModElements;
 
 import java.util.function.Supplier;
@@ -247,7 +249,7 @@ public class GhostlocationGui extends DestinyLocModElements.ModElement {
 				OpenseasonProcedure.executeProcedure($_dependencies);
 			}
 		}
-		if (buttonID == 10) {
+		if (buttonID == 9) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -256,6 +258,24 @@ public class GhostlocationGui extends DestinyLocModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				OpenmaplegendaryProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 10) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				OpenmapMoonProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 11) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				TPthetowerProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

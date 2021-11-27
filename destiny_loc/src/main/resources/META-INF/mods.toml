@@ -4,14 +4,14 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="destiny_loc"
-version="1.0.166"
-displayName="Destiny LoC"
+version="2.0.0"
+displayName="Destiny Craft"
 credits="Vanilla"
-displayURL="https://twitter.com/Vanilla_JP"
+displayURL="https://stellavinfo.wixsite.com/light-our-craft"
 logoFile="logo.png"
 authors="Vanilla"
 description='''
-for Light our Craft Server Mods
+for Destiny Craft Server Mods
 '''
 
 [[dependencies.destiny_loc]]

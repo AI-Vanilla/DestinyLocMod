@@ -59,11 +59,11 @@ public class GhostmapoverworldGuiWindow extends ContainerScreen<Ghostmapoverworl
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
 		this.blit(ms, this.guiLeft + 189, this.guiTop + 150, 0, 0, 16, 16, 16, 16);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
-		this.blit(ms, this.guiLeft + 349, this.guiTop + 97, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.guiLeft + 331, this.guiTop + 83, 0, 0, 16, 16, 16, 16);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/publicevent.png"));
 		this.blit(ms, this.guiLeft + 211, this.guiTop + 33, 0, 0, 32, 32, 32, 32);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/publicevent.png"));
-		this.blit(ms, this.guiLeft + 357, this.guiTop + 53, 0, 0, 32, 32, 32, 32);
+		this.blit(ms, this.guiLeft + 363, this.guiTop + 52, 0, 0, 32, 32, 32, 32);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/strike.png"));
 		this.blit(ms, this.guiLeft + 54, this.guiTop + 47, 0, 0, 32, 32, 32, 32);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/spe_direct.png"));
@@ -71,9 +71,9 @@ public class GhostmapoverworldGuiWindow extends ContainerScreen<Ghostmapoverworl
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/strike.png"));
 		this.blit(ms, this.guiLeft + 225, this.guiTop + 124, 0, 0, 32, 32, 32, 32);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/raid.png"));
-		this.blit(ms, this.guiLeft + 335, this.guiTop + 122, 0, 0, 48, 48, 48, 48);
+		this.blit(ms, this.guiLeft + 347, this.guiTop + 97, 0, 0, 48, 48, 48, 48);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
-		this.blit(ms, this.guiLeft + 5, this.guiTop + 21, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.guiLeft + 17, this.guiTop + 20, 0, 0, 16, 16, 16, 16);
 		RenderSystem.disableBlend();
 	}
 
@@ -95,11 +95,8 @@ public class GhostmapoverworldGuiWindow extends ContainerScreen<Ghostmapoverworl
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Map", 191, 10, -12829636);
 		this.font.drawString(ms, "OVER WORLD", 174, 21, -12829636);
-		this.font.drawString(ms, "BATTLESHIP", 172, 167, -12829636);
-		this.font.drawString(ms, "DARK PERIPHERY", 322, 112, -12829636);
 		this.font.drawString(ms, "MINING STOP", 201, 64, -12829636);
-		this.font.drawString(ms, "POLLUTION", 349, 86, -12829636);
-		this.font.drawString(ms, "CLIFF", 2, 36, -12829636);
+		this.font.drawString(ms, "POLLUTION", 350, 83, -12829636);
 	}
 
 	@Override
@@ -154,10 +151,28 @@ public class GhostmapoverworldGuiWindow extends ContainerScreen<Ghostmapoverworl
 				GhostmapoverworldGui.handleButtonAction(entity, 6, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 327, this.guiTop + 170, 65, 20, new StringTextComponent("VALHALLA"), e -> {
+		this.addButton(new Button(this.guiLeft + 330, this.guiTop + 145, 65, 20, new StringTextComponent("VALHALLA"), e -> {
 			if (true) {
 				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmapoverworldGui.ButtonPressedMessage(7, x, y, z));
 				GhostmapoverworldGui.handleButtonAction(entity, 7, x, y, z);
+			}
+		}));
+		this.addButton(new Button(this.guiLeft + 0, this.guiTop + 36, 50, 20, new StringTextComponent("CLIFF"), e -> {
+			if (true) {
+				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmapoverworldGui.ButtonPressedMessage(8, x, y, z));
+				GhostmapoverworldGui.handleButtonAction(entity, 8, x, y, z);
+			}
+		}));
+		this.addButton(new Button(this.guiLeft + 148, this.guiTop + 165, 75, 20, new StringTextComponent("BATTLESHIP"), e -> {
+			if (true) {
+				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmapoverworldGui.ButtonPressedMessage(9, x, y, z));
+				GhostmapoverworldGui.handleButtonAction(entity, 9, x, y, z);
+			}
+		}));
+		this.addButton(new Button(this.guiLeft + 268, this.guiTop + 63, 95, 20, new StringTextComponent("DARK PERIPHERY"), e -> {
+			if (true) {
+				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmapoverworldGui.ButtonPressedMessage(10, x, y, z));
+				GhostmapoverworldGui.handleButtonAction(entity, 10, x, y, z);
 			}
 		}));
 	}
