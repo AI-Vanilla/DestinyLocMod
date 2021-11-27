@@ -23,6 +23,9 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.ScreenManager;
 
 import net.destiny.destinyloc.procedures.TPinitialbaseProcedure;
+import net.destiny.destinyloc.procedures.TPdarkProcedure;
+import net.destiny.destinyloc.procedures.TPcliffProcedure;
+import net.destiny.destinyloc.procedures.TPbattleshipProcedure;
 import net.destiny.destinyloc.procedures.OpenseasonProcedure;
 import net.destiny.destinyloc.procedures.OpenlocationProcedure;
 import net.destiny.destinyloc.DestinyLocModElements;
@@ -204,6 +207,27 @@ public class GhostmapoverworldGui extends DestinyLocModElements.ModElement {
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				TPinitialbaseProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 8) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				TPcliffProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 9) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				TPbattleshipProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 10) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				TPdarkProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}
