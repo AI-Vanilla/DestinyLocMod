@@ -1885,6 +1885,24 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "gunammokinetic"
+    },
+    {
+      "name": "Redstonecore",
+      "type": "recipe",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "redstonecore"
+    },
+    {
+      "name": "ShardsOfIllusion",
+      "type": "item",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shards_of_illusion"
     }
   ],
   "variable_elements": [],
@@ -1911,6 +1929,7 @@
       "item.destiny_loc.dreamvein_helmet": "DREAMVEIN helmet",
       "item.destiny_loc.dreamvein_chestplate": "DREAMVEIN chestplate",
       "item.destiny_loc.skeleton_gun": "Skeleton Gun",
+      "item.destiny_loc.shards_of_illusion": "Shards Of Illusion",
       "item.destiny_loc.bequest": "Bequest",
       "item.destiny_loc.vanilla_lv_100": "Vanilla Ultimate Charger Drone",
       "effect.shared_destiny": "Shared Destiny",
@@ -2006,6 +2025,7 @@
       "item.destiny_loc.dreamvein_helmet": "ドリームベインのヘルメット",
       "item.destiny_loc.dreamvein_chestplate": "ドリームベインのチェストプレート",
       "item.destiny_loc.skeleton_gun": "スケルトン・ガン",
+      "item.destiny_loc.shards_of_illusion": "Shards Of Illusion",
       "item.destiny_loc.bequest": "遺贈",
       "item.destiny_loc.vanilla_lv_100": "バニラアルティメットチャージャードローン",
       "effect.shared_destiny": "共有された運命",
@@ -2088,7 +2108,7 @@
   "workspaceSettings": {
     "modid": "destiny_loc",
     "modName": "Destiny Craft",
-    "version": "2.0.0",
+    "version": "2.0.001",
     "description": "for Destiny Craft Server Mods",
     "author": "Vanilla",
     "websiteURL": "https://stellavinfo.wixsite.com/light-our-craft",
