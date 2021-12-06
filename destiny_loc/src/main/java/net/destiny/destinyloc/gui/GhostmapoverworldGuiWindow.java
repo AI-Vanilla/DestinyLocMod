@@ -66,8 +66,6 @@ public class GhostmapoverworldGuiWindow extends ContainerScreen<Ghostmapoverworl
 		this.blit(ms, this.guiLeft + 363, this.guiTop + 52, 0, 0, 32, 32, 32, 32);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/strike.png"));
 		this.blit(ms, this.guiLeft + 54, this.guiTop + 47, 0, 0, 32, 32, 32, 32);
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/spe_direct.png"));
-		this.blit(ms, this.guiLeft + 120, this.guiTop + 24, 0, 0, 42, 42, 42, 42);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/strike.png"));
 		this.blit(ms, this.guiLeft + 225, this.guiTop + 124, 0, 0, 32, 32, 32, 32);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/raid.png"));
@@ -139,40 +137,34 @@ public class GhostmapoverworldGuiWindow extends ContainerScreen<Ghostmapoverworl
 				GhostmapoverworldGui.handleButtonAction(entity, 4, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 100, this.guiTop + 62, 85, 20, new StringTextComponent("SEASON QUEST"), e -> {
+		this.addButton(new Button(this.guiLeft + 224, this.guiTop + 156, 75, 20, new StringTextComponent("BATTLESHIP"), e -> {
 			if (true) {
 				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmapoverworldGui.ButtonPressedMessage(5, x, y, z));
 				GhostmapoverworldGui.handleButtonAction(entity, 5, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 224, this.guiTop + 156, 75, 20, new StringTextComponent("BATTLESHIP"), e -> {
+		this.addButton(new Button(this.guiLeft + 330, this.guiTop + 145, 65, 20, new StringTextComponent("VALHALLA"), e -> {
 			if (true) {
 				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmapoverworldGui.ButtonPressedMessage(6, x, y, z));
 				GhostmapoverworldGui.handleButtonAction(entity, 6, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 330, this.guiTop + 145, 65, 20, new StringTextComponent("VALHALLA"), e -> {
+		this.addButton(new Button(this.guiLeft + 0, this.guiTop + 36, 50, 20, new StringTextComponent("CLIFF"), e -> {
 			if (true) {
 				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmapoverworldGui.ButtonPressedMessage(7, x, y, z));
 				GhostmapoverworldGui.handleButtonAction(entity, 7, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 0, this.guiTop + 36, 50, 20, new StringTextComponent("CLIFF"), e -> {
+		this.addButton(new Button(this.guiLeft + 148, this.guiTop + 165, 75, 20, new StringTextComponent("BATTLESHIP"), e -> {
 			if (true) {
 				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmapoverworldGui.ButtonPressedMessage(8, x, y, z));
 				GhostmapoverworldGui.handleButtonAction(entity, 8, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 148, this.guiTop + 165, 75, 20, new StringTextComponent("BATTLESHIP"), e -> {
+		this.addButton(new Button(this.guiLeft + 268, this.guiTop + 63, 95, 20, new StringTextComponent("DARK PERIPHERY"), e -> {
 			if (true) {
 				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmapoverworldGui.ButtonPressedMessage(9, x, y, z));
 				GhostmapoverworldGui.handleButtonAction(entity, 9, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 268, this.guiTop + 63, 95, 20, new StringTextComponent("DARK PERIPHERY"), e -> {
-			if (true) {
-				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmapoverworldGui.ButtonPressedMessage(10, x, y, z));
-				GhostmapoverworldGui.handleButtonAction(entity, 10, x, y, z);
 			}
 		}));
 	}

@@ -189,27 +189,6 @@
       {
         "type": "image",
         "data": {
-          "image": "spe_direct.png",
-          "use1Xscale": true,
-          "name": "spe_direct.png",
-          "x": 134,
-          "y": 47
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "SEASON QUEST",
-          "width": 85,
-          "height": 20,
-          "name": "SEASON QUEST",
-          "x": 114,
-          "y": 85
-        }
-      },
-      {
-        "type": "image",
-        "data": {
           "image": "strike.png",
           "use1Xscale": true,
           "name": "strike.png",

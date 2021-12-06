@@ -74,27 +74,6 @@
           "x": 191,
           "y": 44
         }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "nf.png",
-          "use1Xscale": false,
-          "name": "nf.png",
-          "x": 182,
-          "y": 68
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "NIGHTFALL",
-          "width": 70,
-          "height": 20,
-          "name": "NIGHTFALL",
-          "x": 179,
-          "y": 130
-        }
       }
     ],
     "gridSettings": {

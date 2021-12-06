@@ -209,21 +209,21 @@ public class GhostmapoverworldGui extends DestinyLocModElements.ModElement {
 				TPinitialbaseProcedure.executeProcedure($_dependencies);
 			}
 		}
-		if (buttonID == 8) {
+		if (buttonID == 7) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				TPcliffProcedure.executeProcedure($_dependencies);
 			}
 		}
-		if (buttonID == 9) {
+		if (buttonID == 8) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				TPbattleshipProcedure.executeProcedure($_dependencies);
 			}
 		}
-		if (buttonID == 10) {
+		if (buttonID == 9) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);

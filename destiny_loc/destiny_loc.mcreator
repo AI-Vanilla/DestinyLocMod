@@ -1903,6 +1903,23 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "shards_of_illusion"
+    },
+    {
+      "name": "TPMoon",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tp_moon",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -1912,8 +1929,8 @@
       "item.destiny_loc.europa_zombie_spawn_egg": "Europa Zombie Spawn Egg",
       "itemGroup.tabdestiny_lo_c": "Destiny LoC",
       "item.destiny_loc.vanilla_lv_50": "Vanilla Super Charger Drone",
-      "biome.destiny_loc.subspacebio": "Subspacebio",
       "item.destiny_loc.vanilla_essence_exo_spawn_egg": "Vanilla1, Essence Exo Spawn Egg",
+      "biome.destiny_loc.subspacebio": "Subspacebio",
       "effect.copyoftheduplicate": "Copy of the duplicate",
       "item.destiny_loc.enhanced_prism": "Enhanced Prism",
       "effect.voidof_space": "Void of Space",
@@ -2008,8 +2025,8 @@
       "item.destiny_loc.europa_zombie_spawn_egg": "Europa Zombie Spawn Egg",
       "itemGroup.tabdestiny_lo_c": "Destiny LoC",
       "item.destiny_loc.vanilla_lv_50": "バニラスーパーチャージャードローン",
-      "item.destiny_loc.vanilla_essence_exo_spawn_egg": "Vanilla1, Essence Exo Spawn Egg",
       "biome.destiny_loc.subspacebio": "亜空間",
+      "item.destiny_loc.vanilla_essence_exo_spawn_egg": "Vanilla1, Essence Exo Spawn Egg",
       "effect.copyoftheduplicate": "複製体のコピー",
       "item.destiny_loc.enhanced_prism": "強化プリズム",
       "effect.voidof_space": "宇宙空間",
@@ -2108,7 +2125,7 @@
   "workspaceSettings": {
     "modid": "destiny_loc",
     "modName": "Destiny Craft",
-    "version": "2.0.001",
+    "version": "2.0.008",
     "description": "for Destiny Craft Server Mods",
     "author": "Vanilla",
     "websiteURL": "https://stellavinfo.wixsite.com/light-our-craft",

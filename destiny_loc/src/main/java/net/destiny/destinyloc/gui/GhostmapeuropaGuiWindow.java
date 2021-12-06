@@ -58,6 +58,8 @@ public class GhostmapeuropaGuiWindow extends ContainerScreen<GhostmapeuropaGui.G
 		this.blit(ms, this.guiLeft + 191, this.guiTop + 75, 0, 0, 16, 16, 16, 16);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/raid.png"));
 		this.blit(ms, this.guiLeft + 291, this.guiTop + 33, 0, 0, 48, 48, 48, 48);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/s2.png"));
+		this.blit(ms, this.guiLeft + 36, this.guiTop + 59, 0, 0, 64, 64, 64, 64);
 		RenderSystem.disableBlend();
 	}
 
@@ -79,6 +81,7 @@ public class GhostmapeuropaGuiWindow extends ContainerScreen<GhostmapeuropaGui.G
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Map", 191, 10, -12829636);
 		this.font.drawString(ms, "EUROPA", 184, 21, -12829636);
+		this.font.drawString(ms, "SEASON QUEST", 38, 121, -12829636);
 	}
 
 	@Override
