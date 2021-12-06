@@ -65,19 +65,6 @@
       {
         "type": "label",
         "data": {
-          "text": "STARTING OF SEASON 2",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "name": "STARTING OF SEASON 2",
-          "x": 162,
-          "y": 111
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "text": "Moon",
           "color": {
             "value": -12829636,
@@ -94,18 +81,68 @@
           "image": "golden_pickaxe.png",
           "use1Xscale": false,
           "name": "golden_pickaxe.png",
-          "x": 145,
-          "y": 107
+          "x": 204,
+          "y": 108
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Gate",
+          "onClick": {
+            "name": "TPMoon"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "Gate",
+          "x": 190,
+          "y": 124
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "golden_pickaxe.png",
-          "use1Xscale": false,
-          "name": "golden_pickaxe.png",
-          "x": 263,
-          "y": 107
+          "image": "publicevent.png",
+          "use1Xscale": true,
+          "name": "publicevent.png",
+          "x": 83,
+          "y": 133
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Mining Stop",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Mining Stop",
+          "x": 70,
+          "y": 164
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "publicevent.png",
+          "use1Xscale": true,
+          "name": "publicevent.png",
+          "x": 316,
+          "y": 155
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Awakening Flame",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Awakening Flame",
+          "x": 296,
+          "y": 186
         }
       }
     ],

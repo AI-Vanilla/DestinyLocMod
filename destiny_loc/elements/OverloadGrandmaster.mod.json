@@ -1,0 +1,130 @@
+{
+  "_fv": 24,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "[Lv200] OVERLOAD CHAMPION",
+    "mobLabel": "[Lv200] OVERLOAD CHAMPION",
+    "mobModelName": "Biped",
+    "mobModelTexture": "stray.png",
+    "mobModelGlowTexture": "",
+    "modelWidth": 1.0,
+    "modelHeight": 2.2,
+    "modelShadowSize": 0.9,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "creativeTab": {
+      "value": "CUSTOM:DestinyLoC"
+    },
+    "isBoss": true,
+    "bossBarColor": "BLUE",
+    "bossBarType": "NOTCHED_10",
+    "equipmentMainHand": {
+      "value": "CUSTOM:SkeletonCannon"
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": "Items.CHAINMAIL_HELMET"
+    },
+    "equipmentBody": {
+      "value": "Items.CHAINMAIL_CHESTPLATE"
+    },
+    "equipmentLeggings": {
+      "value": "Items.CHAINMAIL_LEGGINGS"
+    },
+    "equipmentBoots": {
+      "value": "Items.CHAINMAIL_BOOTS"
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEAD",
+    "attackStrength": 5,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 0.9,
+    "movementSpeed": 0.5,
+    "armorBaseValue": 0.0,
+    "trackingRange": 64,
+    "health": 1000,
+    "xpAmount": 50,
+    "waterMob": false,
+    "flyingMob": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": "Blocks.DIAMOND_BLOCK"
+    },
+    "livingSound": {
+      "value": "entity.blaze.burn"
+    },
+    "hurtSound": {
+      "value": "entity.iron_golem.damage"
+    },
+    "deathSound": {
+      "value": "entity.wither.death"
+    },
+    "stepSound": {
+      "value": "entity.creeper.primed"
+    },
+    "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "END_ROD"
+    },
+    "particleSpawningShape": "Spread",
+    "particleSpawningRadious": 0.5,
+    "particleAmount": 4,
+    "whenMobDies": {
+      "name": "Death_Overload"
+    },
+    "whenMobIsHurt": {
+      "name": "Overload_damage"
+    },
+    "onInitialSpawn": {
+      "name": "Spawn_Overload"
+    },
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"364\" y=\"6\"><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:EuropaZombie</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": true,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "SkeletonCannon",
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": true,
+    "spawningProbability": 20,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
+    "restrictionBiomes": [],
+    "spawnInDungeons": false
+  }
+}

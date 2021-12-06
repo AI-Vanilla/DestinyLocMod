@@ -54,8 +54,8 @@ public class GhostSeasonGuiWindow extends ContainerScreen<GhostSeasonGui.GuiCont
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/season1.png"));
-		this.blit(ms, this.guiLeft + -138, this.guiTop + -63, 0, 0, 664, 352, 664, 352);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/s2.png"));
+		this.blit(ms, this.guiLeft + 164, this.guiTop + 52, 0, 0, 64, 64, 64, 64);
 		RenderSystem.disableBlend();
 	}
 
@@ -75,9 +75,9 @@ public class GhostSeasonGuiWindow extends ContainerScreen<GhostSeasonGui.GuiCont
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "SEASON OF ENVOY", 155, 131, -12829636);
+		this.font.drawString(ms, "SEASON OF NIGHTMARE", 148, 129, -12829636);
 		this.font.drawString(ms, "Season", 181, 8, -12829636);
-		this.font.drawString(ms, "7/31 - 11/30", 162, 143, -12829636);
+		this.font.drawString(ms, "12/4 - 3/3", 171, 143, -12829636);
 	}
 
 	@Override

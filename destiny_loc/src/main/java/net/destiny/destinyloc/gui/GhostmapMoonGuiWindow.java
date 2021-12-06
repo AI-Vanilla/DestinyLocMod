@@ -55,9 +55,11 @@ public class GhostmapMoonGuiWindow extends ContainerScreen<GhostmapMoonGui.GuiCo
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
-		this.blit(ms, this.guiLeft + 131, this.guiTop + 84, 0, 0, 16, 16, 16, 16);
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
-		this.blit(ms, this.guiLeft + 249, this.guiTop + 84, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.guiLeft + 190, this.guiTop + 85, 0, 0, 16, 16, 16, 16);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/publicevent.png"));
+		this.blit(ms, this.guiLeft + 69, this.guiTop + 110, 0, 0, 32, 32, 32, 32);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/publicevent.png"));
+		this.blit(ms, this.guiLeft + 302, this.guiTop + 132, 0, 0, 32, 32, 32, 32);
 		RenderSystem.disableBlend();
 	}
 
@@ -78,8 +80,9 @@ public class GhostmapMoonGuiWindow extends ContainerScreen<GhostmapMoonGui.GuiCo
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Map", 191, 10, -12829636);
-		this.font.drawString(ms, "STARTING OF SEASON 2", 148, 88, -12829636);
 		this.font.drawString(ms, "Moon", 188, 26, -12829636);
+		this.font.drawString(ms, "Mining Stop", 56, 141, -12829636);
+		this.font.drawString(ms, "Awakening Flame", 282, 163, -12829636);
 	}
 
 	@Override
@@ -108,6 +111,12 @@ public class GhostmapMoonGuiWindow extends ContainerScreen<GhostmapMoonGui.GuiCo
 			if (true) {
 				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmapMoonGui.ButtonPressedMessage(2, x, y, z));
 				GhostmapMoonGui.handleButtonAction(entity, 2, x, y, z);
+			}
+		}));
+		this.addButton(new Button(this.guiLeft + 176, this.guiTop + 101, 45, 20, new StringTextComponent("Gate"), e -> {
+			if (true) {
+				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmapMoonGui.ButtonPressedMessage(3, x, y, z));
+				GhostmapMoonGui.handleButtonAction(entity, 3, x, y, z);
 			}
 		}));
 	}

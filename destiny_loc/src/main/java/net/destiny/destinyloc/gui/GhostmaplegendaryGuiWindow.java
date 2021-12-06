@@ -54,8 +54,6 @@ public class GhostmaplegendaryGuiWindow extends ContainerScreen<Ghostmaplegendar
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/nf.png"));
-		this.blit(ms, this.guiLeft + 168, this.guiTop + 45, 0, 0, 64, 64, 64, 64);
 		RenderSystem.disableBlend();
 	}
 
@@ -105,12 +103,6 @@ public class GhostmaplegendaryGuiWindow extends ContainerScreen<Ghostmaplegendar
 			if (true) {
 				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmaplegendaryGui.ButtonPressedMessage(2, x, y, z));
 				GhostmaplegendaryGui.handleButtonAction(entity, 2, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 165, this.guiTop + 107, 70, 20, new StringTextComponent("NIGHTFALL"), e -> {
-			if (true) {
-				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostmaplegendaryGui.ButtonPressedMessage(3, x, y, z));
-				GhostmaplegendaryGui.handleButtonAction(entity, 3, x, y, z);
 			}
 		}));
 	}

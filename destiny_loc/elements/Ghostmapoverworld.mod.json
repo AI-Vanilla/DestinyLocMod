@@ -110,39 +110,13 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "text": "BATTLESHIP",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "name": "BATTLESHIP",
-          "x": 186,
-          "y": 190
-        }
-      },
-      {
         "type": "image",
         "data": {
           "image": "golden_pickaxe.png",
           "use1Xscale": false,
           "name": "golden_pickaxe.png",
-          "x": 363,
-          "y": 120
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "DARK PERIPHERY",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "name": "DARK PERIPHERY",
-          "x": 336,
-          "y": 135
+          "x": 345,
+          "y": 106
         }
       },
       {
@@ -174,8 +148,8 @@
           "image": "publicevent.png",
           "use1Xscale": true,
           "name": "publicevent.png",
-          "x": 371,
-          "y": 76
+          "x": 377,
+          "y": 75
         }
       },
       {
@@ -187,8 +161,8 @@
             "falpha": 0.0
           },
           "name": "POLLUTION",
-          "x": 363,
-          "y": 109
+          "x": 364,
+          "y": 106
         }
       },
       {
@@ -210,27 +184,6 @@
           "name": "PLANNING",
           "x": 49,
           "y": 99
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "spe_direct.png",
-          "use1Xscale": true,
-          "name": "spe_direct.png",
-          "x": 134,
-          "y": 47
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "SEASON QUEST",
-          "width": 85,
-          "height": 20,
-          "name": "SEASON QUEST",
-          "x": 114,
-          "y": 85
         }
       },
       {
@@ -260,8 +213,8 @@
           "image": "raid.png",
           "use1Xscale": true,
           "name": "raid.png",
-          "x": 349,
-          "y": 145
+          "x": 361,
+          "y": 120
         }
       },
       {
@@ -271,8 +224,8 @@
           "width": 65,
           "height": 20,
           "name": "VALHALLA",
-          "x": 341,
-          "y": 193
+          "x": 344,
+          "y": 168
         }
       },
       {
@@ -281,21 +234,50 @@
           "image": "golden_pickaxe.png",
           "use1Xscale": false,
           "name": "golden_pickaxe.png",
-          "x": 19,
-          "y": 44
+          "x": 31,
+          "y": 43
         }
       },
       {
-        "type": "label",
+        "type": "button",
         "data": {
           "text": "CLIFF",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
+          "onClick": {
+            "name": "TPcliff"
           },
+          "width": 50,
+          "height": 20,
           "name": "CLIFF",
-          "x": 16,
+          "x": 14,
           "y": 59
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "BATTLESHIP",
+          "onClick": {
+            "name": "TPbattleship"
+          },
+          "width": 75,
+          "height": 20,
+          "name": "BATTLESHIP",
+          "x": 162,
+          "y": 188
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "DARK PERIPHERY",
+          "onClick": {
+            "name": "TPdark"
+          },
+          "width": 95,
+          "height": 20,
+          "name": "DARK PERIPHERY",
+          "x": 282,
+          "y": 86
         }
       }
     ],

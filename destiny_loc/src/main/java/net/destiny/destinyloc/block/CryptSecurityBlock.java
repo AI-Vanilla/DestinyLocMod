@@ -107,7 +107,7 @@ public class CryptSecurityBlock extends DestinyLocModElements.ModElement {
 					double d3 = (random.nextFloat() - 0.5D) * 0.5D;
 					double d4 = (random.nextFloat() - 0.5D) * 0.5D;
 					double d5 = (random.nextFloat() - 0.5D) * 0.5D;
-					world.addParticle(ParticleTypes.DRIPPING_LAVA, d0, d1, d2, d3, d4, d5);
+					world.addParticle(ParticleTypes.LAVA, d0, d1, d2, d3, d4, d5);
 				}
 		}
 

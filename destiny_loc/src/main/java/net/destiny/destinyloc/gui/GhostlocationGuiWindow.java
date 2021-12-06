@@ -168,5 +168,11 @@ public class GhostlocationGuiWindow extends ContainerScreen<GhostlocationGui.Gui
 				GhostlocationGui.handleButtonAction(entity, 10, x, y, z);
 			}
 		}));
+		this.addButton(new Button(this.guiLeft + 166, this.guiTop + 91, 70, 20, new StringTextComponent("THE TOWER"), e -> {
+			if (true) {
+				DestinyLocMod.PACKET_HANDLER.sendToServer(new GhostlocationGui.ButtonPressedMessage(11, x, y, z));
+				GhostlocationGui.handleButtonAction(entity, 11, x, y, z);
+			}
+		}));
 	}
 }

@@ -38,14 +38,14 @@
       {
         "type": "label",
         "data": {
-          "text": "SEASON OF ENVOY",
+          "text": "SEASON OF NIGHTMARE",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "SEASON OF ENVOY",
-          "x": 169,
-          "y": 154
+          "name": "SEASON OF NIGHTMARE",
+          "x": 162,
+          "y": 152
         }
       },
       {
@@ -76,26 +76,26 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "season1.png",
-          "use1Xscale": true,
-          "name": "season1.png",
-          "x": -125,
-          "y": -41
-        }
-      },
-      {
         "type": "label",
         "data": {
-          "text": "7/31 - 11/30",
+          "text": "12/4 - 3/3",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "7/31 - 11/30",
-          "x": 176,
+          "name": "12/4 - 3/3",
+          "x": 185,
           "y": 166
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "s2.png",
+          "use1Xscale": false,
+          "name": "s2.png",
+          "x": 178,
+          "y": 75
         }
       }
     ],
