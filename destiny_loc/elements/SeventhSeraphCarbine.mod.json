@@ -25,6 +25,9 @@
     "animation": "bow",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
+    "onRangedItemUsed": {
+      "name": "Seventh_seraph_carbine_delay"
+    },
     "bulletPower": 1.2000000000000002,
     "bulletDamage": 9.0,
     "bulletKnockback": 1,

@@ -34,12 +34,15 @@ import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.Blocks;
 
+import net.destiny.destinyloc.procedures.Seventh_seraph_carbine_delayProcedure;
 import net.destiny.destinyloc.itemgroup.DestinyLoCWeaponItemGroup;
 import net.destiny.destinyloc.entity.renderer.SeventhSeraphCarbineRenderer;
 import net.destiny.destinyloc.DestinyLocModElements;
 
 import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 
 @DestinyLocModElements.ModElement.Tag
 public class SeventhSeraphCarbineItem extends DestinyLocModElements.ModElement {
@@ -123,6 +126,11 @@ public class SeventhSeraphCarbineItem extends DestinyLocModElements.ModElement {
 								if (stack.isEmpty())
 									entity.inventory.deleteStack(stack);
 							}
+						}
+						{
+							Map<String, Object> $_dependencies = new HashMap<>();
+							$_dependencies.put("entity", entity);
+							Seventh_seraph_carbine_delayProcedure.executeProcedure($_dependencies);
 						}
 					}
 					entity.stopActiveHand();
