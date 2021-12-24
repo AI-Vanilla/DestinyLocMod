@@ -27,6 +27,7 @@ public class GhostmapeuropaGuiWindow extends ContainerScreen<GhostmapeuropaGui.G
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = GhostmapeuropaGui.guistate;
+
 	public GhostmapeuropaGuiWindow(GhostmapeuropaGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class GhostmapeuropaGuiWindow extends ContainerScreen<GhostmapeuropaGui.G
 		this.xSize = 400;
 		this.ySize = 195;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("destiny_loc:textures/ghostmapeuropa.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -54,12 +57,16 @@ public class GhostmapeuropaGuiWindow extends ContainerScreen<GhostmapeuropaGui.G
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/apple.png"));
 		this.blit(ms, this.guiLeft + 191, this.guiTop + 75, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/raid.png"));
 		this.blit(ms, this.guiLeft + 291, this.guiTop + 33, 0, 0, 48, 48, 48, 48);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/s2.png"));
 		this.blit(ms, this.guiLeft + 36, this.guiTop + 59, 0, 0, 64, 64, 64, 64);
+
 		RenderSystem.disableBlend();
 	}
 

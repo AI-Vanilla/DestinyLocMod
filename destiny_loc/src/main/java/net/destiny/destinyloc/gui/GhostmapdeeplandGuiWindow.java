@@ -27,6 +27,7 @@ public class GhostmapdeeplandGuiWindow extends ContainerScreen<GhostmapdeeplandG
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = GhostmapdeeplandGui.guistate;
+
 	public GhostmapdeeplandGuiWindow(GhostmapdeeplandGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class GhostmapdeeplandGuiWindow extends ContainerScreen<GhostmapdeeplandG
 		this.xSize = 400;
 		this.ySize = 195;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("destiny_loc:textures/ghostmapdeepland.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -54,10 +57,13 @@ public class GhostmapdeeplandGuiWindow extends ContainerScreen<GhostmapdeeplandG
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/apple.png"));
 		this.blit(ms, this.guiLeft + 191, this.guiTop + 75, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/labyrinth.png"));
 		this.blit(ms, this.guiLeft + 56, this.guiTop + 35, 0, 0, 48, 48, 48, 48);
+
 		RenderSystem.disableBlend();
 	}
 

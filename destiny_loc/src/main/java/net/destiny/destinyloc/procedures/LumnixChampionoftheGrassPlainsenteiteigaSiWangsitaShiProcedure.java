@@ -13,6 +13,7 @@ import net.destiny.destinyloc.DestinyLocMod;
 import java.util.Map;
 
 public class LumnixChampionoftheGrassPlainsenteiteigaSiWangsitaShiProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))

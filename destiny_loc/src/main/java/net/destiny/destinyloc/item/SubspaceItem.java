@@ -17,6 +17,7 @@ import net.destiny.destinyloc.itemgroup.DestinyLoCItemGroup;
 public class SubspaceItem extends Item {
 	@ObjectHolder("destiny_loc:subspace")
 	public static final Item block = null;
+
 	public SubspaceItem() {
 		super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxDamage(64));
 	}

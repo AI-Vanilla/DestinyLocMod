@@ -21,6 +21,7 @@ import java.util.List;
 public class LegendaryEngramItem extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:legendary_engram")
 	public static final Item block = null;
+
 	public LegendaryEngramItem(DestinyLocModElements instance) {
 		super(instance, 2);
 	}
@@ -29,6 +30,7 @@ public class LegendaryEngramItem extends DestinyLocModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxStackSize(1).rarity(Rarity.EPIC));

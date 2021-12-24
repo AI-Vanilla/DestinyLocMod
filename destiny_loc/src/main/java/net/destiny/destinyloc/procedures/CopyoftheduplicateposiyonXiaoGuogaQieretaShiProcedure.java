@@ -8,6 +8,7 @@ import net.destiny.destinyloc.DestinyLocMod;
 import java.util.Map;
 
 public class CopyoftheduplicateposiyonXiaoGuogaQieretaShiProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))

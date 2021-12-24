@@ -46,6 +46,7 @@ public class EuropaZombieEntity extends DestinyLocModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(50).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.6f, 1.8f)).build("europa_zombie").setRegistryName("europa_zombie");
+
 	public EuropaZombieEntity(DestinyLocModElements instance) {
 		super(instance, 40);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EuropaZombieRenderer.ModelRegisterHandler());
@@ -75,6 +76,7 @@ public class EuropaZombieEntity extends DestinyLocModElements.ModElement {
 		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
 				MonsterEntity::canMonsterSpawn);
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {

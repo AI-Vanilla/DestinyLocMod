@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "xpReward": 1.0,
+    "cookingTime": 25,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:RareFabrics2021"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:LivelyCookies2021"
+    },
+    "name": "lc",
+    "namespace": "mod"
+  }
+}

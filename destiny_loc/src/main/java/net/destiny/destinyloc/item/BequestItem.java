@@ -24,6 +24,7 @@ import com.google.common.collect.ImmutableMultimap;
 public class BequestItem extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:bequest")
 	public static final Item block = null;
+
 	public BequestItem(DestinyLocModElements instance) {
 		super(instance, 121);
 	}
@@ -32,6 +33,7 @@ public class BequestItem extends DestinyLocModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(DestinyLoCWeaponItemGroup.tab).maxDamage(6700).rarity(Rarity.UNCOMMON));

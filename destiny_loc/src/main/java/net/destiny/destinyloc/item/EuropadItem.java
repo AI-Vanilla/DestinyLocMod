@@ -17,6 +17,7 @@ import net.destiny.destinyloc.itemgroup.DestinyLoCItemGroup;
 public class EuropadItem extends Item {
 	@ObjectHolder("destiny_loc:europad")
 	public static final Item block = null;
+
 	public EuropadItem() {
 		super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxDamage(64));
 	}

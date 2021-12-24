@@ -17,6 +17,7 @@ import net.destiny.destinyloc.itemgroup.DestinyLoCItemGroup;
 public class MoondimItem extends Item {
 	@ObjectHolder("destiny_loc:moondim")
 	public static final Item block = null;
+
 	public MoondimItem() {
 		super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxDamage(64));
 	}

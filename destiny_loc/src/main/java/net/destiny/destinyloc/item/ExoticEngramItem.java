@@ -23,6 +23,7 @@ import java.util.List;
 public class ExoticEngramItem extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:exotic_engram")
 	public static final Item block = null;
+
 	public ExoticEngramItem(DestinyLocModElements instance) {
 		super(instance, 4);
 	}
@@ -31,6 +32,7 @@ public class ExoticEngramItem extends DestinyLocModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxStackSize(1).rarity(Rarity.UNCOMMON));

@@ -17,6 +17,7 @@ import net.destiny.destinyloc.DestinyLocModElements;
 public class AscendantfragmentItem extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:ascendantfragment")
 	public static final Item block = null;
+
 	public AscendantfragmentItem(DestinyLocModElements instance) {
 		super(instance, 64);
 	}
@@ -25,6 +26,7 @@ public class AscendantfragmentItem extends DestinyLocModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxStackSize(16).rarity(Rarity.UNCOMMON));

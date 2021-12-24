@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "destiny_loc:common_fabrics_2021"
+    },
+    {
+      "item": "destiny_loc:common_fabrics_2021"
+    },
+    {
+      "item": "destiny_loc:common_fabrics_2021"
+    },
+    {
+      "item": "destiny_loc:common_fabrics_2021"
+    },
+    {
+      "item": "minecraft:gold_nugget"
+    },
+    {
+      "item": "destiny_loc:common_fabrics_2021"
+    },
+    {
+      "item": "destiny_loc:common_fabrics_2021"
+    },
+    {
+      "item": "destiny_loc:common_fabrics_2021"
+    },
+    {
+      "item": "destiny_loc:common_fabrics_2021"
+    }
+  ],
+  "result": {
+    "item": "destiny_loc:rare_fabrics_2021",
+    "count": 1
+  }
+}

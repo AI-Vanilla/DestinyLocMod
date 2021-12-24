@@ -6,7 +6,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effect;
@@ -15,16 +14,16 @@ import net.minecraft.potion.Effect;
 public class VoidofSpacePotionEffect {
 	@ObjectHolder("destiny_loc:voidof_space")
 	public static final Effect potion = null;
+
 	@SubscribeEvent
 	public static void registerEffect(RegistryEvent.Register<Effect> event) {
 		event.getRegistry().register(new EffectCustom());
 	}
+
 	public static class EffectCustom extends Effect {
-		private final ResourceLocation potionIcon;
 		public EffectCustom() {
 			super(EffectType.HARMFUL, -1);
 			setRegistryName("voidof_space");
-			potionIcon = new ResourceLocation("destiny_loc:textures/posion_bad.png");
 		}
 
 		@Override

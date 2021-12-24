@@ -15,20 +15,21 @@ import net.destiny.destinyloc.DestinyLocMod;
 import java.util.Map;
 
 public class VanillaEssenceExoenteiteigaSiWangsitaShiProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				DestinyLocMod.LOGGER.warn("Failed to load dependency entity for procedure VanillaEssenceExoenteiteigaSiWangsitaShi!");
-			return;
-		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				DestinyLocMod.LOGGER.warn("Failed to load dependency world for procedure VanillaEssenceExoenteiteigaSiWangsitaShi!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				DestinyLocMod.LOGGER.warn("Failed to load dependency entity for procedure VanillaEssenceExoenteiteigaSiWangsitaShi!");
+			return;
+		}
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false)) {
+		Entity entity = (Entity) dependencies.get("entity");
+		if ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false) {
 			if (!world.isRemote()) {
 				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 				if (mcserv != null)

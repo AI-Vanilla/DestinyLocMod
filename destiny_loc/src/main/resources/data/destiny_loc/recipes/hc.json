@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 1,
+  "cookingtime": 30,
+  "ingredient": {
+    "item": "destiny_loc:legendary_fabrics_2021"
+  },
+  "result": {
+    "item": "destiny_loc:hope_cookies_2021"
+  }
+}

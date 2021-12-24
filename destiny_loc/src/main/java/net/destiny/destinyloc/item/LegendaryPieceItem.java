@@ -23,6 +23,7 @@ import java.util.List;
 public class LegendaryPieceItem extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:legendary_piece")
 	public static final Item block = null;
+
 	public LegendaryPieceItem(DestinyLocModElements instance) {
 		super(instance, 20);
 	}
@@ -31,6 +32,7 @@ public class LegendaryPieceItem extends DestinyLocModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxStackSize(64).rarity(Rarity.EPIC));

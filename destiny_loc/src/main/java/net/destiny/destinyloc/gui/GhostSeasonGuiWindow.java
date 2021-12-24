@@ -27,6 +27,7 @@ public class GhostSeasonGuiWindow extends ContainerScreen<GhostSeasonGui.GuiCont
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = GhostSeasonGui.guistate;
+
 	public GhostSeasonGuiWindow(GhostSeasonGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class GhostSeasonGuiWindow extends ContainerScreen<GhostSeasonGui.GuiCont
 		this.xSize = 400;
 		this.ySize = 195;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("destiny_loc:textures/ghost_season.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -54,8 +57,10 @@ public class GhostSeasonGuiWindow extends ContainerScreen<GhostSeasonGui.GuiCont
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/s2.png"));
 		this.blit(ms, this.guiLeft + 164, this.guiTop + 52, 0, 0, 64, 64, 64, 64);
+
 		RenderSystem.disableBlend();
 	}
 

@@ -32,10 +32,12 @@ import net.destiny.destinyloc.DestinyLocModElements;
 @DestinyLocModElements.ModElement.Tag
 public class MarsBioBiome extends DestinyLocModElements.ModElement {
 	public static Biome biome;
+
 	public MarsBioBiome(DestinyLocModElements instance) {
 		super(instance, 26);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
+
 	private static class BiomeRegisterHandler {
 		@SubscribeEvent
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
@@ -62,6 +64,7 @@ public class MarsBioBiome extends DestinyLocModElements.ModElement {
 			}
 		}
 	}
+
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		BiomeDictionary.addTypes(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), BiomeDictionary.Type.DEAD);

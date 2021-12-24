@@ -24,9 +24,11 @@ import net.destiny.destinyloc.procedures.DreamVeinmodProcedure;
 import net.destiny.destinyloc.itemgroup.DestinyLocArmorItemGroup;
 import net.destiny.destinyloc.DestinyLocModElements;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @DestinyLocModElements.ModElement.Tag
 public class DREAMVEINItem extends DestinyLocModElements.ModElement {
@@ -38,6 +40,7 @@ public class DREAMVEINItem extends DestinyLocModElements.ModElement {
 	public static final Item legs = null;
 	@ObjectHolder("destiny_loc:dreamvein_boots")
 	public static final Item boots = null;
+
 	public DREAMVEINItem(DestinyLocModElements instance) {
 		super(instance, 116);
 	}
@@ -104,11 +107,9 @@ public class DREAMVEINItem extends DestinyLocModElements.ModElement {
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					DreamVeinmodProcedure.executeProcedure($_dependencies);
-				}
+
+				DreamVeinmodProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			}
 		}.setRegistryName("dreamvein_helmet"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(DestinyLocArmorItemGroup.tab)) {
@@ -128,11 +129,9 @@ public class DREAMVEINItem extends DestinyLocModElements.ModElement {
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					DreamVeinmodProcedure.executeProcedure($_dependencies);
-				}
+
+				DreamVeinmodProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			}
 		}.setRegistryName("dreamvein_chestplate"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(DestinyLocArmorItemGroup.tab)) {
@@ -152,11 +151,9 @@ public class DREAMVEINItem extends DestinyLocModElements.ModElement {
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					DreamVeinmodProcedure.executeProcedure($_dependencies);
-				}
+
+				DreamVeinmodProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			}
 		}.setRegistryName("dreamvein_leggings"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(DestinyLocArmorItemGroup.tab)) {
@@ -176,12 +173,11 @@ public class DREAMVEINItem extends DestinyLocModElements.ModElement {
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					DreamVeinmodProcedure.executeProcedure($_dependencies);
-				}
+
+				DreamVeinmodProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			}
 		}.setRegistryName("dreamvein_boots"));
 	}
+
 }

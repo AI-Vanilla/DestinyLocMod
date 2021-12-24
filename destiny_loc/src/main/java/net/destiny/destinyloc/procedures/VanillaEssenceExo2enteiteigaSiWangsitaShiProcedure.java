@@ -18,19 +18,20 @@ import net.destiny.destinyloc.DestinyLocMod;
 import java.util.Map;
 
 public class VanillaEssenceExo2enteiteigaSiWangsitaShiProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				DestinyLocMod.LOGGER.warn("Failed to load dependency entity for procedure VanillaEssenceExo2enteiteigaSiWangsitaShi!");
-			return;
-		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				DestinyLocMod.LOGGER.warn("Failed to load dependency world for procedure VanillaEssenceExo2enteiteigaSiWangsitaShi!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				DestinyLocMod.LOGGER.warn("Failed to load dependency entity for procedure VanillaEssenceExo2enteiteigaSiWangsitaShi!");
+			return;
+		}
 		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
 		if (!world.isRemote()) {
 			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 			if (mcserv != null)

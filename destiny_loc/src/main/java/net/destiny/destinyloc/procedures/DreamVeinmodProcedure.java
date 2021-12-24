@@ -13,6 +13,7 @@ import net.destiny.destinyloc.DestinyLocMod;
 import java.util.Map;
 
 public class DreamVeinmodProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -20,19 +21,18 @@ public class DreamVeinmodProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((DREAMVEINItem.helmet == ((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
-				: ItemStack.EMPTY).getItem())) {
-			if ((DREAMVEINItem.body == ((entity instanceof LivingEntity)
-					? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
-					: ItemStack.EMPTY).getItem())) {
-				if ((DREAMVEINItem.legs == ((entity instanceof LivingEntity)
-						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
-						: ItemStack.EMPTY).getItem())) {
-					if ((DREAMVEINItem.boots == ((entity instanceof LivingEntity)
-							? ((LivingEntity) entity)
-									.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-							: ItemStack.EMPTY).getItem())) {
+		if (DREAMVEINItem.helmet == ((entity instanceof LivingEntity)
+				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.HEAD)
+				: ItemStack.EMPTY).getItem()) {
+			if (DREAMVEINItem.body == ((entity instanceof LivingEntity)
+					? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST)
+					: ItemStack.EMPTY).getItem()) {
+				if (DREAMVEINItem.legs == ((entity instanceof LivingEntity)
+						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.LEGS)
+						: ItemStack.EMPTY).getItem()) {
+					if (DREAMVEINItem.boots == ((entity instanceof LivingEntity)
+							? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET)
+							: ItemStack.EMPTY).getItem()) {
 						if (entity instanceof LivingEntity)
 							((LivingEntity) entity).addPotionEffect(new EffectInstance(NightmareResistantPotionEffect.potion, (int) 60, (int) 3));
 					} else {
@@ -40,10 +40,9 @@ public class DreamVeinmodProcedure {
 							((LivingEntity) entity).addPotionEffect(new EffectInstance(NightmareResistantPotionEffect.potion, (int) 60, (int) 2));
 					}
 				} else {
-					if ((DREAMVEINItem.boots == ((entity instanceof LivingEntity)
-							? ((LivingEntity) entity)
-									.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-							: ItemStack.EMPTY).getItem())) {
+					if (DREAMVEINItem.boots == ((entity instanceof LivingEntity)
+							? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET)
+							: ItemStack.EMPTY).getItem()) {
 						if (entity instanceof LivingEntity)
 							((LivingEntity) entity).addPotionEffect(new EffectInstance(NightmareResistantPotionEffect.potion, (int) 60, (int) 2));
 					} else {
@@ -52,13 +51,12 @@ public class DreamVeinmodProcedure {
 					}
 				}
 			} else {
-				if ((DREAMVEINItem.legs == ((entity instanceof LivingEntity)
-						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
-						: ItemStack.EMPTY).getItem())) {
-					if ((DREAMVEINItem.boots == ((entity instanceof LivingEntity)
-							? ((LivingEntity) entity)
-									.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-							: ItemStack.EMPTY).getItem())) {
+				if (DREAMVEINItem.legs == ((entity instanceof LivingEntity)
+						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.LEGS)
+						: ItemStack.EMPTY).getItem()) {
+					if (DREAMVEINItem.boots == ((entity instanceof LivingEntity)
+							? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET)
+							: ItemStack.EMPTY).getItem()) {
 						if (entity instanceof LivingEntity)
 							((LivingEntity) entity).addPotionEffect(new EffectInstance(NightmareResistantPotionEffect.potion, (int) 60, (int) 2));
 					} else {
@@ -66,10 +64,9 @@ public class DreamVeinmodProcedure {
 							((LivingEntity) entity).addPotionEffect(new EffectInstance(NightmareResistantPotionEffect.potion, (int) 60, (int) 1));
 					}
 				} else {
-					if ((DREAMVEINItem.boots == ((entity instanceof LivingEntity)
-							? ((LivingEntity) entity)
-									.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-							: ItemStack.EMPTY).getItem())) {
+					if (DREAMVEINItem.boots == ((entity instanceof LivingEntity)
+							? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET)
+							: ItemStack.EMPTY).getItem()) {
 						if (entity instanceof LivingEntity)
 							((LivingEntity) entity).addPotionEffect(new EffectInstance(NightmareResistantPotionEffect.potion, (int) 60, (int) 1));
 					} else {
@@ -79,16 +76,15 @@ public class DreamVeinmodProcedure {
 				}
 			}
 		} else {
-			if ((DREAMVEINItem.body == ((entity instanceof LivingEntity)
-					? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
-					: ItemStack.EMPTY).getItem())) {
-				if ((DREAMVEINItem.legs == ((entity instanceof LivingEntity)
-						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
-						: ItemStack.EMPTY).getItem())) {
-					if ((DREAMVEINItem.boots == ((entity instanceof LivingEntity)
-							? ((LivingEntity) entity)
-									.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-							: ItemStack.EMPTY).getItem())) {
+			if (DREAMVEINItem.body == ((entity instanceof LivingEntity)
+					? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST)
+					: ItemStack.EMPTY).getItem()) {
+				if (DREAMVEINItem.legs == ((entity instanceof LivingEntity)
+						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.LEGS)
+						: ItemStack.EMPTY).getItem()) {
+					if (DREAMVEINItem.boots == ((entity instanceof LivingEntity)
+							? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET)
+							: ItemStack.EMPTY).getItem()) {
 						if (entity instanceof LivingEntity)
 							((LivingEntity) entity).addPotionEffect(new EffectInstance(NightmareResistantPotionEffect.potion, (int) 60, (int) 2));
 					} else {
@@ -96,10 +92,9 @@ public class DreamVeinmodProcedure {
 							((LivingEntity) entity).addPotionEffect(new EffectInstance(NightmareResistantPotionEffect.potion, (int) 60, (int) 1));
 					}
 				} else {
-					if ((DREAMVEINItem.boots == ((entity instanceof LivingEntity)
-							? ((LivingEntity) entity)
-									.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-							: ItemStack.EMPTY).getItem())) {
+					if (DREAMVEINItem.boots == ((entity instanceof LivingEntity)
+							? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET)
+							: ItemStack.EMPTY).getItem()) {
 						if (entity instanceof LivingEntity)
 							((LivingEntity) entity).addPotionEffect(new EffectInstance(NightmareResistantPotionEffect.potion, (int) 60, (int) 1));
 					} else {
@@ -108,13 +103,12 @@ public class DreamVeinmodProcedure {
 					}
 				}
 			} else {
-				if ((DREAMVEINItem.legs == ((entity instanceof LivingEntity)
-						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
-						: ItemStack.EMPTY).getItem())) {
-					if ((DREAMVEINItem.boots == ((entity instanceof LivingEntity)
-							? ((LivingEntity) entity)
-									.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-							: ItemStack.EMPTY).getItem())) {
+				if (DREAMVEINItem.legs == ((entity instanceof LivingEntity)
+						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.LEGS)
+						: ItemStack.EMPTY).getItem()) {
+					if (DREAMVEINItem.boots == ((entity instanceof LivingEntity)
+							? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET)
+							: ItemStack.EMPTY).getItem()) {
 						if (entity instanceof LivingEntity)
 							((LivingEntity) entity).addPotionEffect(new EffectInstance(NightmareResistantPotionEffect.potion, (int) 60, (int) 1));
 					} else {
@@ -122,10 +116,9 @@ public class DreamVeinmodProcedure {
 							((LivingEntity) entity).addPotionEffect(new EffectInstance(NightmareResistantPotionEffect.potion, (int) 60, (int) 0));
 					}
 				} else {
-					if ((DREAMVEINItem.boots == ((entity instanceof LivingEntity)
-							? ((LivingEntity) entity)
-									.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-							: ItemStack.EMPTY).getItem())) {
+					if (DREAMVEINItem.boots == ((entity instanceof LivingEntity)
+							? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET)
+							: ItemStack.EMPTY).getItem()) {
 						if (entity instanceof LivingEntity)
 							((LivingEntity) entity).addPotionEffect(new EffectInstance(NightmareResistantPotionEffect.potion, (int) 60, (int) 0));
 					}

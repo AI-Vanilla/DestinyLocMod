@@ -25,6 +25,7 @@ import java.util.Collections;
 public class LegendaryBlockBlock extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:legendary_block")
 	public static final Block block = null;
+
 	public LegendaryBlockBlock(DestinyLocModElements instance) {
 		super(instance, 8);
 	}
@@ -34,6 +35,7 @@ public class LegendaryBlockBlock extends DestinyLocModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(DestinyLoCItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 10f).setLightLevel(s -> 0).harvestLevel(4)

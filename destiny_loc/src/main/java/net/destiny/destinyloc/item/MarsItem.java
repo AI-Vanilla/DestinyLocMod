@@ -17,6 +17,7 @@ import net.destiny.destinyloc.itemgroup.DestinyLoCItemGroup;
 public class MarsItem extends Item {
 	@ObjectHolder("destiny_loc:mars")
 	public static final Item block = null;
+
 	public MarsItem() {
 		super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxDamage(64));
 	}

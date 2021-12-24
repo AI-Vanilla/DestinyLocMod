@@ -17,6 +17,7 @@ import net.destiny.destinyloc.DestinyLocModElements;
 public class EnhancementCoreItem extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:enhancement_core")
 	public static final Item block = null;
+
 	public EnhancementCoreItem(DestinyLocModElements instance) {
 		super(instance, 62);
 	}
@@ -25,6 +26,7 @@ public class EnhancementCoreItem extends DestinyLocModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxStackSize(64).rarity(Rarity.EPIC));

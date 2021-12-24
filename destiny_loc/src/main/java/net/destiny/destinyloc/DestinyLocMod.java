@@ -46,6 +46,7 @@ public class DestinyLocMod {
 	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation("destiny_loc", "destiny_loc"),
 			() -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
 	public DestinyLocModElements elements;
+
 	public DestinyLocMod() {
 		elements = new DestinyLocModElements();
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
@@ -86,8 +87,10 @@ public class DestinyLocMod {
 	public void registerSounds(RegistryEvent.Register<net.minecraft.util.SoundEvent> event) {
 		elements.registerSounds(event);
 	}
+
 	private static class DestinyLocModFMLBusEvents {
 		private final DestinyLocMod parent;
+
 		DestinyLocModFMLBusEvents(DestinyLocMod parent) {
 			this.parent = parent;
 		}

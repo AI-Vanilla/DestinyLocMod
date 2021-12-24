@@ -53,9 +53,11 @@ import net.destiny.destinyloc.DestinyLocModElements;
 
 import javax.annotation.Nullable;
 
+import java.util.stream.Stream;
 import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @DestinyLocModElements.ModElement.Tag
 public class VanillaEssenceExoEntity extends DestinyLocModElements.ModElement {
@@ -65,6 +67,7 @@ public class VanillaEssenceExoEntity extends DestinyLocModElements.ModElement {
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletvanilla_essence_exo").setRegistryName("entitybulletvanilla_essence_exo");
+
 	public VanillaEssenceExoEntity(DestinyLocModElements instance) {
 		super(instance, 83);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new VanillaEssenceExoRenderer.ModelRegisterHandler());
@@ -82,6 +85,7 @@ public class VanillaEssenceExoEntity extends DestinyLocModElements.ModElement {
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
@@ -178,11 +182,9 @@ public class VanillaEssenceExoEntity extends DestinyLocModElements.ModElement {
 			double z = this.getPosZ();
 			Entity sourceentity = source.getTrueSource();
 			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("world", world);
-				VanillaEssenceExo1enteiteigaSiWangsitaShiProcedure.executeProcedure($_dependencies);
-			}
+
+			VanillaEssenceExo1enteiteigaSiWangsitaShiProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override
@@ -193,11 +195,9 @@ public class VanillaEssenceExoEntity extends DestinyLocModElements.ModElement {
 			double y = this.getPosY();
 			double z = this.getPosZ();
 			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("world", world);
-				VanillaEssenceExoenteiteigasuponsitaShiProcedure.executeProcedure($_dependencies);
-			}
+
+			VanillaEssenceExoenteiteigasuponsitaShiProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
 		}
 

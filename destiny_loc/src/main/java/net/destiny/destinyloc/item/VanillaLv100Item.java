@@ -50,6 +50,7 @@ public class VanillaLv100Item extends DestinyLocModElements.ModElement {
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletvanilla_lv_100").setRegistryName("entitybulletvanilla_lv_100");
+
 	public VanillaLv100Item(DestinyLocModElements instance) {
 		super(instance, 39);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new VanillaLv100Renderer.ModelRegisterHandler());
@@ -60,6 +61,7 @@ public class VanillaLv100Item extends DestinyLocModElements.ModElement {
 		elements.items.add(() -> new ItemRanged());
 		elements.entities.add(() -> arrow);
 	}
+
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
 			super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxDamage(100));
@@ -168,6 +170,7 @@ public class VanillaLv100Item extends DestinyLocModElements.ModElement {
 			}
 		}
 	}
+
 	public static ArrowCustomEntity shoot(World world, LivingEntity entity, Random random, float power, double damage, int knockback) {
 		ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
 		entityarrow.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, power * 2, 0);

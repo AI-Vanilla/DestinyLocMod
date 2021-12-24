@@ -27,6 +27,7 @@ public class GhostmapmarsGuiWindow extends ContainerScreen<GhostmapmarsGui.GuiCo
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = GhostmapmarsGui.guistate;
+
 	public GhostmapmarsGuiWindow(GhostmapmarsGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class GhostmapmarsGuiWindow extends ContainerScreen<GhostmapmarsGui.GuiCo
 		this.xSize = 400;
 		this.ySize = 195;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("destiny_loc:textures/ghostmapmars.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -54,8 +57,10 @@ public class GhostmapmarsGuiWindow extends ContainerScreen<GhostmapmarsGui.GuiCo
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/apple.png"));
 		this.blit(ms, this.guiLeft + 189, this.guiTop + 70, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 

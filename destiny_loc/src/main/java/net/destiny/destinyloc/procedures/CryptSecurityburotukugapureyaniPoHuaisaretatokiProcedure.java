@@ -20,7 +20,13 @@ import net.destiny.destinyloc.DestinyLocMod;
 import java.util.Map;
 
 public class CryptSecurityburotukugapureyaniPoHuaisaretatokiProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				DestinyLocMod.LOGGER.warn("Failed to load dependency world for procedure CryptSecurityburotukugapureyaniPoHuaisaretatoki!");
+			return;
+		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				DestinyLocMod.LOGGER.warn("Failed to load dependency x for procedure CryptSecurityburotukugapureyaniPoHuaisaretatoki!");
@@ -36,15 +42,10 @@ public class CryptSecurityburotukugapureyaniPoHuaisaretatokiProcedure {
 				DestinyLocMod.LOGGER.warn("Failed to load dependency z for procedure CryptSecurityburotukugapureyaniPoHuaisaretatoki!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				DestinyLocMod.LOGGER.warn("Failed to load dependency world for procedure CryptSecurityburotukugapureyaniPoHuaisaretatoki!");
-			return;
-		}
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
 		world.playEvent(2001, new BlockPos((int) x, (int) y, (int) z), Block.getStateId(CryptSecurityBlock.block.getDefaultState()));
 		if (world instanceof World && !world.isRemote()) {
 			((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),

@@ -1,0 +1,31 @@
+{
+  "_fv": 24,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "dream_cookies_2021",
+    "customModelName": "Normal",
+    "name": "2021 Dream Cookies",
+    "rarity": "UNCOMMON",
+    "specialInfo": [
+      "It's great."
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:DestinyLoC"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 5,
+    "saturation": 0.3,
+    "eatingSpeed": 15,
+    "resultItem": {
+      "value": ""
+    },
+    "forDogs": false,
+    "isAlwaysEdible": false,
+    "animation": "eat",
+    "hasGlow": true,
+    "onEaten": {
+      "name": "EatDreamCookies"
+    }
+  }
+}

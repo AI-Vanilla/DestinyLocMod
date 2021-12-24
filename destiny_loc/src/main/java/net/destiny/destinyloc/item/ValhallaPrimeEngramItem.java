@@ -23,6 +23,7 @@ import java.util.List;
 public class ValhallaPrimeEngramItem extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:valhalla_prime_engram")
 	public static final Item block = null;
+
 	public ValhallaPrimeEngramItem(DestinyLocModElements instance) {
 		super(instance, 45);
 	}
@@ -31,6 +32,7 @@ public class ValhallaPrimeEngramItem extends DestinyLocModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxStackSize(1).rarity(Rarity.EPIC));

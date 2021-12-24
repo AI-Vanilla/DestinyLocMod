@@ -61,14 +61,17 @@ import net.destiny.destinyloc.DestinyLocModElements;
 
 import javax.annotation.Nullable;
 
+import java.util.stream.Stream;
 import java.util.function.Predicate;
 import java.util.function.Function;
 import java.util.Set;
 import java.util.Random;
 import java.util.Optional;
 import java.util.Map;
+import java.util.HashSet;
 import java.util.HashMap;
 import java.util.Comparator;
+import java.util.AbstractMap;
 
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 
@@ -79,6 +82,7 @@ import com.google.common.collect.ImmutableSet;
 public class SpaceDimentionDimension extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:space_dimention_portal")
 	public static final CustomPortalBlock portal = null;
+
 	public SpaceDimentionDimension(DestinyLocModElements instance) {
 		super(instance, 68);
 		MinecraftForge.EVENT_BUS.register(this);
@@ -87,14 +91,20 @@ public class SpaceDimentionDimension extends DestinyLocModElements.ModElement {
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
+		Set<Block> replaceableBlocks = new HashSet<>();
+		replaceableBlocks.add(Blocks.VOID_AIR);
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("destiny_loc:space")).getGenerationSettings().getSurfaceBuilder()
+				.get().getConfig().getTop().getBlock());
+		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("destiny_loc:space")).getGenerationSettings().getSurfaceBuilder()
+				.get().getConfig().getUnder().getBlock());
 		DeferredWorkQueue.runLater(() -> {
 			try {
 				ObfuscationReflectionHelper.setPrivateValue(WorldCarver.class, WorldCarver.CAVE, new ImmutableSet.Builder<Block>()
 						.addAll((Set<Block>) ObfuscationReflectionHelper.getPrivateValue(WorldCarver.class, WorldCarver.CAVE, "field_222718_j"))
-						.add(Blocks.VOID_AIR).build(), "field_222718_j");
+						.addAll(replaceableBlocks).build(), "field_222718_j");
 				ObfuscationReflectionHelper.setPrivateValue(WorldCarver.class, WorldCarver.CANYON, new ImmutableSet.Builder<Block>()
 						.addAll((Set<Block>) ObfuscationReflectionHelper.getPrivateValue(WorldCarver.class, WorldCarver.CANYON, "field_222718_j"))
-						.add(Blocks.VOID_AIR).build(), "field_222718_j");
+						.addAll(replaceableBlocks).build(), "field_222718_j");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -126,8 +136,10 @@ public class SpaceDimentionDimension extends DestinyLocModElements.ModElement {
 		});
 		RenderTypeLookup.setRenderLayer(portal, RenderType.getTranslucent());
 	}
+
 	private static PointOfInterestType poi = null;
 	public static final TicketType<BlockPos> CUSTOM_PORTAL = TicketType.create("space_dimention_portal", Vector3i::compareTo, 300);
+
 	public static class POIRegisterHandler {
 		@SubscribeEvent
 		public void registerPointOfInterest(RegistryEvent.Register<PointOfInterestType> event) {
@@ -136,11 +148,13 @@ public class SpaceDimentionDimension extends DestinyLocModElements.ModElement {
 			ForgeRegistries.POI_TYPES.register(poi);
 		}
 	}
+
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomPortalBlock());
 		elements.items.add(() -> new SpaceDimentionItem().setRegistryName("space_dimention"));
 	}
+
 	public static class CustomPortalBlock extends NetherPortalBlock {
 		public CustomPortalBlock() {
 			super(Block.Properties.create(Material.PORTAL).doesNotBlockMovement().tickRandomly().hardnessAndResistance(-1.0F).sound(SoundType.GLASS)
@@ -163,13 +177,9 @@ public class SpaceDimentionDimension extends DestinyLocModElements.ModElement {
 			}
 		}
 
-		@Override /**
-					 * Update the provided state given the provided neighbor facing and neighbor
-					 * state, returning a new state. For example, fences make their connections to
-					 * the passed in state if possible, and wet concrete powder immediately returns
-					 * its solidified counterpart. Note that this method should ideally consider
-					 * only the specific face passed in.
-					 */
+		@Override /** 
+					* Update the provided state given the provided neighbor facing and neighbor state, returning a new state. For example, fences make their connections to the passed in state if possible, and wet concrete powder immediately returns its solidified counterpart. Note that this method should ideally consider only the specific face passed in.
+					*/
 		public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos,
 				BlockPos facingPos) {
 			Direction.Axis direction$axis = facing.getAxis();
@@ -237,6 +247,7 @@ public class SpaceDimentionDimension extends DestinyLocModElements.ModElement {
 		private BlockPos bottomLeft;
 		private int height;
 		private int width;
+
 		public static Optional<CustomPortalSize> func_242964_a(IWorld world, BlockPos pos, Direction.Axis axis) {
 			return func_242965_a(world, pos, (size) -> {
 				return size.isValid() && size.portalBlockCount == 0;
@@ -412,6 +423,7 @@ public class SpaceDimentionDimension extends DestinyLocModElements.ModElement {
 	public static class TeleporterDimensionMod implements ITeleporter {
 		private final ServerWorld world;
 		private final BlockPos entityEnterPos;
+
 		public TeleporterDimensionMod(ServerWorld worldServer, BlockPos entityEnterPos) {
 			this.world = worldServer;
 			this.entityEnterPos = entityEnterPos;
@@ -607,6 +619,7 @@ public class SpaceDimentionDimension extends DestinyLocModElements.ModElement {
 			}
 		}
 	}
+
 	@SubscribeEvent
 	public void onPlayerChangedDimensionEvent(PlayerEvent.PlayerChangedDimensionEvent event) {
 		Entity entity = event.getPlayer();
@@ -615,18 +628,14 @@ public class SpaceDimentionDimension extends DestinyLocModElements.ModElement {
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		if (event.getFrom() == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("destiny_loc:space_dimention"))) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				SpaceDimentionpureiyagadeimenziyonkaraChutaShiProcedure.executeProcedure($_dependencies);
-			}
+
+			SpaceDimentionpureiyagadeimenziyonkaraChutaShiProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 		if (event.getTo() == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("destiny_loc:space_dimention"))) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				SpaceDimentionpureiyagadeimenziyonniRututatokiProcedure.executeProcedure($_dependencies);
-			}
+
+			SpaceDimentionpureiyagadeimenziyonniRututatokiProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

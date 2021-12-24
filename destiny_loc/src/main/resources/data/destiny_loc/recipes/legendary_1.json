@@ -1,5 +1,4 @@
 {
-  "group": "destiny_loc",
   "type": "minecraft:smelting",
   "experience": 200,
   "cookingtime": 6000,
