@@ -23,6 +23,7 @@ import java.util.List;
 public class SwordoffortitudeItem extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:swordoffortitude")
 	public static final Item block = null;
+
 	public SwordoffortitudeItem(DestinyLocModElements instance) {
 		super(instance, 28);
 	}

@@ -27,6 +27,7 @@ public class GhostGuiWindow extends ContainerScreen<GhostGui.GuiContainerMod> {
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = GhostGui.guistate;
+
 	public GhostGuiWindow(GhostGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class GhostGuiWindow extends ContainerScreen<GhostGui.GuiContainerMod> {
 		this.xSize = 136;
 		this.ySize = 176;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("destiny_loc:textures/ghost.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);

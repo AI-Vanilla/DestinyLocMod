@@ -27,6 +27,7 @@ public class GhostmapNoLocationGuiWindow extends ContainerScreen<GhostmapNoLocat
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = GhostmapNoLocationGui.guistate;
+
 	public GhostmapNoLocationGuiWindow(GhostmapNoLocationGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class GhostmapNoLocationGuiWindow extends ContainerScreen<GhostmapNoLocat
 		this.xSize = 400;
 		this.ySize = 195;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("destiny_loc:textures/ghostmap_no_location.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);

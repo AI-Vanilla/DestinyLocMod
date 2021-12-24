@@ -27,6 +27,7 @@ public class GhostmapoverworldGuiWindow extends ContainerScreen<Ghostmapoverworl
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = GhostmapoverworldGui.guistate;
+
 	public GhostmapoverworldGuiWindow(GhostmapoverworldGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class GhostmapoverworldGuiWindow extends ContainerScreen<Ghostmapoverworl
 		this.xSize = 400;
 		this.ySize = 195;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("destiny_loc:textures/ghostmapoverworld.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -54,24 +57,34 @@ public class GhostmapoverworldGuiWindow extends ContainerScreen<Ghostmapoverworl
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/apple.png"));
 		this.blit(ms, this.guiLeft + 189, this.guiTop + 70, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
 		this.blit(ms, this.guiLeft + 189, this.guiTop + 150, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
 		this.blit(ms, this.guiLeft + 331, this.guiTop + 83, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/publicevent.png"));
 		this.blit(ms, this.guiLeft + 211, this.guiTop + 33, 0, 0, 32, 32, 32, 32);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/publicevent.png"));
 		this.blit(ms, this.guiLeft + 363, this.guiTop + 52, 0, 0, 32, 32, 32, 32);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/strike.png"));
 		this.blit(ms, this.guiLeft + 54, this.guiTop + 47, 0, 0, 32, 32, 32, 32);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/strike.png"));
 		this.blit(ms, this.guiLeft + 225, this.guiTop + 124, 0, 0, 32, 32, 32, 32);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/raid.png"));
 		this.blit(ms, this.guiLeft + 347, this.guiTop + 97, 0, 0, 48, 48, 48, 48);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
 		this.blit(ms, this.guiLeft + 17, this.guiTop + 20, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 

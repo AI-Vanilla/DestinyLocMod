@@ -52,6 +52,7 @@ import java.util.Collections;
 public class LegendaryOreBlock extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:legendary_ore")
 	public static final Block block = null;
+
 	public LegendaryOreBlock(DestinyLocModElements instance) {
 		super(instance, 7);
 		MinecraftForge.EVENT_BUS.register(this);
@@ -63,6 +64,7 @@ public class LegendaryOreBlock extends DestinyLocModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(DestinyLoCItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1.9999999999999998f, 3.758793233250228f)
@@ -95,12 +97,15 @@ public class LegendaryOreBlock extends DestinyLocModElements.ModElement {
 			return Collections.singletonList(new ItemStack(LegendaryOreBlock.block, (int) (2)));
 		}
 	}
+
 	private static Feature<OreFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	private static IRuleTestType<CustomRuleTest> CUSTOM_MATCH = null;
+
 	private static class CustomRuleTest extends RuleTest {
 		static final CustomRuleTest INSTANCE = new CustomRuleTest();
 		static final com.mojang.serialization.Codec<CustomRuleTest> codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+
 		public boolean test(BlockState blockAt, Random random) {
 			boolean blockCriteria = false;
 			if (blockAt.getBlock() == Blocks.STONE)
@@ -135,6 +140,7 @@ public class LegendaryOreBlock extends DestinyLocModElements.ModElement {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("destiny_loc:legendary_ore"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> configuredFeature);

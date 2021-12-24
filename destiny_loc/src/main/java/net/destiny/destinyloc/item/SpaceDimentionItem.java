@@ -17,6 +17,7 @@ import net.destiny.destinyloc.itemgroup.DestinyLoCItemGroup;
 public class SpaceDimentionItem extends Item {
 	@ObjectHolder("destiny_loc:space_dimention")
 	public static final Item block = null;
+
 	public SpaceDimentionItem() {
 		super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxDamage(64));
 	}

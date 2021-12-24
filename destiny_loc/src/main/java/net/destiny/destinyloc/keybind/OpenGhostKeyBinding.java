@@ -22,14 +22,17 @@ import net.destiny.destinyloc.procedures.Push_g_keyProcedure;
 import net.destiny.destinyloc.DestinyLocModElements;
 import net.destiny.destinyloc.DestinyLocMod;
 
+import java.util.stream.Stream;
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @DestinyLocModElements.ModElement.Tag
 public class OpenGhostKeyBinding extends DestinyLocModElements.ModElement {
 	@OnlyIn(Dist.CLIENT)
 	private KeyBinding keys;
+
 	public OpenGhostKeyBinding(DestinyLocModElements instance) {
 		super(instance, 94);
 		elements.addNetworkMessage(KeyBindingPressedMessage.class, KeyBindingPressedMessage::buffer, KeyBindingPressedMessage::new,
@@ -56,8 +59,10 @@ public class OpenGhostKeyBinding extends DestinyLocModElements.ModElement {
 			}
 		}
 	}
+
 	public static class KeyBindingPressedMessage {
 		int type, pressedms;
+
 		public KeyBindingPressedMessage(int type, int pressedms) {
 			this.type = type;
 			this.pressedms = pressedms;
@@ -81,6 +86,7 @@ public class OpenGhostKeyBinding extends DestinyLocModElements.ModElement {
 			context.setPacketHandled(true);
 		}
 	}
+
 	private static void pressAction(PlayerEntity entity, int type, int pressedms) {
 		World world = entity.world;
 		double x = entity.getPosX();
@@ -90,15 +96,11 @@ public class OpenGhostKeyBinding extends DestinyLocModElements.ModElement {
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
 		if (type == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				Push_g_keyProcedure.executeProcedure($_dependencies);
-			}
+
+			Push_g_keyProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

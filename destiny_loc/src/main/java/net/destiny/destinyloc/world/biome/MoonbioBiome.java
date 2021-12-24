@@ -27,10 +27,12 @@ import com.google.common.collect.ImmutableList;
 @DestinyLocModElements.ModElement.Tag
 public class MoonbioBiome extends DestinyLocModElements.ModElement {
 	public static Biome biome;
+
 	public MoonbioBiome(DestinyLocModElements instance) {
 		super(instance, 136);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
+
 	private static class BiomeRegisterHandler {
 		@SubscribeEvent
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
@@ -59,6 +61,7 @@ public class MoonbioBiome extends DestinyLocModElements.ModElement {
 			}
 		}
 	}
+
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 	}

@@ -30,6 +30,7 @@ public class VanillaEssenceExo1Renderer {
 					}
 				};
 				customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));
+
 				return customRender;
 			});
 			RenderingRegistry.registerEntityRenderingHandler(VanillaEssenceExo1Entity.arrow,

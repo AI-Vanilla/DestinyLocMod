@@ -27,6 +27,7 @@ public class GhostmaplegendaryGuiWindow extends ContainerScreen<Ghostmaplegendar
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = GhostmaplegendaryGui.guistate;
+
 	public GhostmaplegendaryGuiWindow(GhostmaplegendaryGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class GhostmaplegendaryGuiWindow extends ContainerScreen<Ghostmaplegendar
 		this.xSize = 400;
 		this.ySize = 195;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("destiny_loc:textures/ghostmaplegendary.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);

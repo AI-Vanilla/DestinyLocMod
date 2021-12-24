@@ -15,6 +15,7 @@ import net.destiny.destinyloc.DestinyLocModElements;
 public class HeavygunpowderItem extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:heavygunpowder")
 	public static final Item block = null;
+
 	public HeavygunpowderItem(DestinyLocModElements instance) {
 		super(instance, 50);
 	}
@@ -23,6 +24,7 @@ public class HeavygunpowderItem extends DestinyLocModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

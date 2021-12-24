@@ -29,10 +29,12 @@ import net.destiny.destinyloc.DestinyLocModElements;
 @DestinyLocModElements.ModElement.Tag
 public class EuropaBiome extends DestinyLocModElements.ModElement {
 	public static Biome biome;
+
 	public EuropaBiome(DestinyLocModElements instance) {
 		super(instance, 23);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
+
 	private static class BiomeRegisterHandler {
 		@SubscribeEvent
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
@@ -69,6 +71,7 @@ public class EuropaBiome extends DestinyLocModElements.ModElement {
 			}
 		}
 	}
+
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 	}

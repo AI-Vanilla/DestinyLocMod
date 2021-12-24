@@ -23,6 +23,7 @@ import java.util.List;
 public class DeepStoneCryptExoticEngramItem extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:deep_stone_crypt_exotic_engram")
 	public static final Item block = null;
+
 	public DeepStoneCryptExoticEngramItem(DestinyLocModElements instance) {
 		super(instance, 48);
 	}
@@ -31,6 +32,7 @@ public class DeepStoneCryptExoticEngramItem extends DestinyLocModElements.ModEle
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxStackSize(1).rarity(Rarity.UNCOMMON));

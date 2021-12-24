@@ -27,6 +27,7 @@ public class GhostlocationGuiWindow extends ContainerScreen<GhostlocationGui.Gui
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = GhostlocationGui.guistate;
+
 	public GhostlocationGuiWindow(GhostlocationGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class GhostlocationGuiWindow extends ContainerScreen<GhostlocationGui.Gui
 		this.xSize = 400;
 		this.ySize = 195;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("destiny_loc:textures/ghostlocation.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -54,22 +57,31 @@ public class GhostlocationGuiWindow extends ContainerScreen<GhostlocationGui.Gui
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/apple.png"));
 		this.blit(ms, this.guiLeft + 194, this.guiTop + 137, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
 		this.blit(ms, this.guiLeft + 25, this.guiTop + 153, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
 		this.blit(ms, this.guiLeft + 27, this.guiTop + 107, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
 		this.blit(ms, this.guiLeft + 350, this.guiTop + 75, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/posion_bad.png"));
 		this.blit(ms, this.guiLeft + 26, this.guiTop + 32, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/posion_bad.png"));
 		this.blit(ms, this.guiLeft + 329, this.guiTop + 142, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/primequest.png"));
 		this.blit(ms, this.guiLeft + 93, this.guiTop + 24, 0, 0, 43, 44, 43, 44);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
 		this.blit(ms, this.guiLeft + 261, this.guiTop + 54, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 

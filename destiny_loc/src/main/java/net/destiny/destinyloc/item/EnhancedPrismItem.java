@@ -17,6 +17,7 @@ import net.destiny.destinyloc.DestinyLocModElements;
 public class EnhancedPrismItem extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:enhanced_prism")
 	public static final Item block = null;
+
 	public EnhancedPrismItem(DestinyLocModElements instance) {
 		super(instance, 63);
 	}
@@ -25,6 +26,7 @@ public class EnhancedPrismItem extends DestinyLocModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxStackSize(64).rarity(Rarity.EPIC));

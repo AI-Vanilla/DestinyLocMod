@@ -17,6 +17,7 @@ import net.destiny.destinyloc.itemgroup.DestinyLoCItemGroup;
 public class DeepStoneCryptItem extends Item {
 	@ObjectHolder("destiny_loc:deep_stone_crypt")
 	public static final Item block = null;
+
 	public DeepStoneCryptItem() {
 		super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxDamage(64));
 	}

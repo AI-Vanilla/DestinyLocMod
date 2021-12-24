@@ -31,5 +31,6 @@ public class DestinyLoCItemGroup extends DestinyLocModElements.ModElement {
 			}
 		};
 	}
+
 	public static ItemGroup tab;
 }

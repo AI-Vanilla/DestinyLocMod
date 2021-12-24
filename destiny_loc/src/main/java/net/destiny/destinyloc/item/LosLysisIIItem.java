@@ -44,6 +44,7 @@ public class LosLysisIIItem extends DestinyLocModElements.ModElement {
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletros_lysis_ii").setRegistryName("entitybulletros_lysis_ii");
+
 	public LosLysisIIItem(DestinyLocModElements instance) {
 		super(instance, 57);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new LosLysisIIRenderer.ModelRegisterHandler());
@@ -54,6 +55,7 @@ public class LosLysisIIItem extends DestinyLocModElements.ModElement {
 		elements.items.add(() -> new ItemRanged());
 		elements.entities.add(() -> arrow);
 	}
+
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
 			super(new Item.Properties().group(DestinyLoCWeaponItemGroup.tab).maxDamage(100));
@@ -175,6 +177,7 @@ public class LosLysisIIItem extends DestinyLocModElements.ModElement {
 			}
 		}
 	}
+
 	public static ArrowCustomEntity shoot(World world, LivingEntity entity, Random random, float power, double damage, int knockback) {
 		ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
 		entityarrow.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, power * 2, 0);

@@ -58,15 +58,18 @@ import net.destiny.destinyloc.DestinyLocModElements;
 
 import javax.annotation.Nullable;
 
+import java.util.stream.Stream;
 import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @DestinyLocModElements.ModElement.Tag
 public class LumnixChampionoftheGrassPlainsEntity extends DestinyLocModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(150).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.6f, 1.8f)).build("lumnix_championofthe_grass_plains").setRegistryName("lumnix_championofthe_grass_plains");
+
 	public LumnixChampionoftheGrassPlainsEntity(DestinyLocModElements instance) {
 		super(instance, 79);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new LumnixChampionoftheGrassPlainsRenderer.ModelRegisterHandler());
@@ -96,6 +99,7 @@ public class LumnixChampionoftheGrassPlainsEntity extends DestinyLocModElements.
 		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
 				MonsterEntity::canMonsterSpawn);
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
@@ -189,11 +193,9 @@ public class LumnixChampionoftheGrassPlainsEntity extends DestinyLocModElements.
 			double z = this.getPosZ();
 			Entity sourceentity = source.getTrueSource();
 			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("world", world);
-				LumnixChampionoftheGrassPlainsenteiteigaSiWangsitaShiProcedure.executeProcedure($_dependencies);
-			}
+
+			LumnixChampionoftheGrassPlainsenteiteigaSiWangsitaShiProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override
@@ -204,11 +206,9 @@ public class LumnixChampionoftheGrassPlainsEntity extends DestinyLocModElements.
 			double y = this.getPosY();
 			double z = this.getPosZ();
 			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				LumnixChampionoftheGrassPlainsenteiteigasuponsitaShiProcedure.executeProcedure($_dependencies);
-			}
+
+			LumnixChampionoftheGrassPlainsenteiteigasuponsitaShiProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
 		}
 
@@ -216,7 +216,9 @@ public class LumnixChampionoftheGrassPlainsEntity extends DestinyLocModElements.
 		public boolean isNonBoss() {
 			return false;
 		}
+
 		private final ServerBossInfo bossInfo = new ServerBossInfo(this.getDisplayName(), BossInfo.Color.RED, BossInfo.Overlay.NOTCHED_10);
+
 		@Override
 		public void addTrackingPlayer(ServerPlayerEntity player) {
 			super.addTrackingPlayer(player);

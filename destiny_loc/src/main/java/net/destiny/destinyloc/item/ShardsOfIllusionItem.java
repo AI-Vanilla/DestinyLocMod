@@ -23,6 +23,7 @@ import java.util.List;
 public class ShardsOfIllusionItem extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:shards_of_illusion")
 	public static final Item block = null;
+
 	public ShardsOfIllusionItem(DestinyLocModElements instance) {
 		super(instance, 146);
 	}
@@ -31,6 +32,7 @@ public class ShardsOfIllusionItem extends DestinyLocModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxStackSize(64).rarity(Rarity.EPIC));

@@ -23,6 +23,7 @@ import java.util.List;
 public class PrimeEngramItem extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:prime_engram")
 	public static final Item block = null;
+
 	public PrimeEngramItem(DestinyLocModElements instance) {
 		super(instance, 3);
 	}
@@ -31,6 +32,7 @@ public class PrimeEngramItem extends DestinyLocModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(DestinyLoCItemGroup.tab).maxStackSize(1).rarity(Rarity.EPIC));

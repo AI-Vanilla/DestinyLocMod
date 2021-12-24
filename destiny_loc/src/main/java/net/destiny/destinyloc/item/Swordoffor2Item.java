@@ -25,6 +25,7 @@ import java.util.List;
 public class Swordoffor2Item extends DestinyLocModElements.ModElement {
 	@ObjectHolder("destiny_loc:swordoffor_2")
 	public static final Item block = null;
+
 	public Swordoffor2Item(DestinyLocModElements instance) {
 		super(instance, 33);
 	}

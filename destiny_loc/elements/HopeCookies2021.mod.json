@@ -1,0 +1,31 @@
+{
+  "_fv": 24,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "hope_cookies_2021",
+    "customModelName": "Normal",
+    "name": "2021 Hope Cookies",
+    "rarity": "EPIC",
+    "specialInfo": [
+      "Grab your hope."
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:DestinyLoC"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 3,
+    "saturation": 0.3,
+    "eatingSpeed": 14,
+    "resultItem": {
+      "value": ""
+    },
+    "forDogs": false,
+    "isAlwaysEdible": false,
+    "animation": "eat",
+    "hasGlow": true,
+    "onEaten": {
+      "name": "EatHopeCookies"
+    }
+  }
+}

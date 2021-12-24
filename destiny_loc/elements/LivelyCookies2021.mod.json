@@ -1,0 +1,31 @@
+{
+  "_fv": 24,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "lively_cookies_2021",
+    "customModelName": "Normal",
+    "name": "2021 Lively Cookies",
+    "rarity": "RARE",
+    "specialInfo": [
+      "Give you courage."
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:DestinyLoC"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 2,
+    "saturation": 0.3,
+    "eatingSpeed": 13,
+    "resultItem": {
+      "value": ""
+    },
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": true,
+    "onEaten": {
+      "name": "Eatlivelycookies"
+    }
+  }
+}

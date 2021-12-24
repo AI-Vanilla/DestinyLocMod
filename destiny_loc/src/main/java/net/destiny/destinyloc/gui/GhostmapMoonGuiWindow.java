@@ -27,6 +27,7 @@ public class GhostmapMoonGuiWindow extends ContainerScreen<GhostmapMoonGui.GuiCo
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = GhostmapMoonGui.guistate;
+
 	public GhostmapMoonGuiWindow(GhostmapMoonGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class GhostmapMoonGuiWindow extends ContainerScreen<GhostmapMoonGui.GuiCo
 		this.xSize = 400;
 		this.ySize = 195;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("destiny_loc:textures/ghostmap_moon.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -54,12 +57,16 @@ public class GhostmapMoonGuiWindow extends ContainerScreen<GhostmapMoonGui.GuiCo
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/golden_pickaxe.png"));
 		this.blit(ms, this.guiLeft + 190, this.guiTop + 85, 0, 0, 16, 16, 16, 16);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/publicevent.png"));
 		this.blit(ms, this.guiLeft + 69, this.guiTop + 110, 0, 0, 32, 32, 32, 32);
+
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("destiny_loc:textures/publicevent.png"));
 		this.blit(ms, this.guiLeft + 302, this.guiTop + 132, 0, 0, 32, 32, 32, 32);
+
 		RenderSystem.disableBlend();
 	}
 
